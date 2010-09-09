@@ -22,7 +22,7 @@ COMPANY_NAME = 'ITX Solutions India Pvt Ltd'
 SHORT_SITE_NAME = 'ITX'
 LONG_SITE_NAME = "#{COMPANY_NAME} #{SHORT_SITE_NAME}"
 
-PRODUCTION_HOST = 'itxsolutionsindia.com'
+PRODUCTION_HOST = 'ideakast.heroku.com'
 STAGING_HOST = 'itxsolutionsindia.com'
 
 TWITTER_ENABLED = true
@@ -75,16 +75,18 @@ Rails::Initializer.run do |config|
   config.gem "calendar_date_select"
   config.gem "rcov"
 
- config.action_mailer.delivery_method = :smtp
- config.action_mailer.smtp_settings = {
+  config.action_mailer.raise_delivery_errors = true
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+         :enable_starttls_auto => true,
          :address => "smtp.gmail.com",
-         :port => 465,
+         :port => 587, #465
          :domain => 'itxsolutionsindia.com',
          :user_name => 'santhosh@itxsolutionsindia.com',
          :password => 'password@123',
-         :authentication => 'plain',
-         :enable_starttls_auto => true }
-  
+         :authentication => 'plain'
+  }
+
 
   # Only load the plugins named here, in the order given. By default, all plugins 
   # in vendor/plugins are loaded in alphabetical order.
@@ -153,3 +155,14 @@ ENV['XD_RECEIVER_LOCATION'] = "/fb/connect/xd_receiver.htm"
 #TWITTER_CONFIG = YAML.load(file.read())[RAILS_ENV]
 
 TWITTER_CONFIG = {"secret" => "nxcAuEdDBP3DRnCZp5ga5cdRBVos8MHJm34PiYZgLk","key" => "IyEmlK78V3jK144ZiPhw"}
+
+  ActionMailer::Base.smtp_settings = {
+         :address => 'smtp.gmail.com',
+         :port => '587',
+         :user_name => 'santhosh@itxsolutionsindia.com',
+         :password => 'password@123',
+         :authentication => :login,
+         :enable_starttls_auto => true,
+         :smtp => true
+        # :plain, :login or :cram_md5   
+  }
