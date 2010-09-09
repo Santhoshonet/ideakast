@@ -1,5 +1,5 @@
 rcov
-rails --version 2.1.1
+rails --version 2.3.8
 mash --version  0.0.3
 haml --version 2.0.3
 color --version 1.4.0
