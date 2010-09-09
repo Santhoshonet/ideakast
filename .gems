@@ -1,36 +1,14 @@
-abstract --version 1.0.0
-actionpack --version 3.0.0
-activemodel --version 3.0.0
-activeresource --version 3.0.0
-arel --version 1.0.1
-builder --version 2.1.2
-bundler --version 1.0.0
-calendar_date_select  --version 1.16.1
-color --version 1.4.1
-crack --version 0.1.8
-erubis --version 2.6.6
-facebooker --version 1.0.74
-ffi --version 0.6.3
-haml --version 3.0.17
-hashie 0.2.2
-httparty --version 0.6.1
-i18n --version 0.4.1
-json_pure --version 1.4.6
-mash --version 0.1.1
-mime-types --version 1.16
-oauth --version 0.4.2
+rcov
+rails --version 2.1.1
+mash --version  0.0.3
+haml --version 2.0.3
+color --version 1.4.0
+ruby-hmac --version 0.3.2
+calendar_date_select --version 1.15
+fastercsv
+oauth --version 0.3.6
 oauth-plugin --version 0.3.14
-pg --version 0.9.0
-polyglot --version 0.3.1
-rakismet --version 0.4.2
-railties --version 3.0.0
-rcov --version 0.9.8
-ruby-hmac --version 0.4.0
-thor --version 0.14.0
-thoughtbot-shoulda --version 2.11.1
-treetop --version 1.4.8
-twitter --version 0.9.8
-tzinfo --version 0.3.23
-yajl-ruby --version 0.7.7
-zlib-crc32_combine --version 1.0.1
-Zliby --version 0.0.5
+httparty --version 0.4.3
+twitter --version 0.6.5
+facebooker
+will_paginate --version 2.3.11
