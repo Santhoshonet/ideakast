@@ -23,9 +23,10 @@ namespace :db do
         puts "Loading postal codes..."
         s = "insert into postal_codes (code, lat, lon) values "
         pc = []
-        fname = File.join(File.dirname(__FILE__), "../../db/data/zips.csv.gz")
+        fname = File.join(File.dirname(__FILE__), "../../db/data/zips.csv")
         raise "can't find zips.csv: #{fname}" unless File.exists? fname
-        handle = Zlib::GzipReader.new(File.open(fname))
+        #handle = Zlib::GzipReader.new(File.open(fname))
+        handle = File.open(fname);
         CSV.new(handle).each do |r|
           r= r.map{|x| x.gsub(/'/,'')}
           pc << PostalCode.send(:sanitize_sql_array, (["(?, ?, ?)", r[0], r[2].to_f, r[3].to_f]))
