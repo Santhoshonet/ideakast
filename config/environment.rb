@@ -23,7 +23,7 @@ SHORT_SITE_NAME = 'ITX'
 LONG_SITE_NAME = "#{COMPANY_NAME} #{SHORT_SITE_NAME}"
 
 PRODUCTION_HOST = 'ideakast.heroku.com'
-STAGING_HOST = 'itxsolutionsindia.com'
+STAGING_HOST = 'ideakast.heroku.com'
 
 TWITTER_ENABLED = true
 

@@ -1,5 +1,5 @@
 class UserMailer < ActionMailer::Base
-   default_url_options[:host] = "itxsolutionsindia.com" 
+   default_url_options[:host] = "ideakast.heroku.com" 
   def signup_notification(user)
     setup_email(user)
     @subject    += 'Please activate your new account'
