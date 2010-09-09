@@ -184,7 +184,7 @@ input, textarea {
     list-style: none; }
   .errorExplanation li {
     padding-left: 24px;
-    background: url(../images/icn/16-sq-ex.png) left center no-repeat; }
+    background: url(../images/16-sq-ex.png) left center no-repeat; }
 
 .fieldWithErrors .input-text, .fieldWithErrors .input-textarea {
   background-color: #fbe3e4;

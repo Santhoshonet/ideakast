@@ -75,7 +75,17 @@ Rails::Initializer.run do |config|
   config.gem "calendar_date_select"
   config.gem "rcov"
 
+ config.action_mailer.delivery_method = :smtp
+ config.action_mailer.smtp_settings = {
+         :address => "smtp.gmail.com",
+         :port => 465,
+         :domain => 'itxsolutionsindia.com',
+         :user_name => 'santhosh@itxsolutionsindia.com',
+         :password => 'password@123',
+         :authentication => 'plain',
+         :enable_starttls_auto => true }
   
+
   # Only load the plugins named here, in the order given. By default, all plugins 
   # in vendor/plugins are loaded in alphabetical order.
   # :all can be used as a placeholder for all plugins not explicitly named
@@ -102,6 +112,7 @@ Rails::Initializer.run do |config|
     :secret      => SESSION_SECRET
   }
 
+  
   # Use the database for sessions instead of the cookie-based default,
   # which shouldn't be used to store highly confidential information
   # (create the session table with "rake db:sessions:create")
@@ -117,7 +128,7 @@ Rails::Initializer.run do |config|
   config.active_record.observers = :user_observer, :comment_observer, :idea_observer
   
   # disable forgery proction so that facebook works (we might be able to disble this only for the facebook controller)
-  # config.action_controller.allow_forgery_protection = false
+  # config.action_controller.allow_forgery_protection = false  
 end
 
 ##

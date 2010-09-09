@@ -162,11 +162,8 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" scope="PROVIDED" name="[gem] actionpack (v3.0.0, C:/Users/Santhosh/AppData/Ruby191/lib/ruby/gems/1.9.1/gems/actionpack-3.0.0)" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="[gem] activemodel (v3.0.0, C:/Users/Santhosh/AppData/Ruby191/lib/ruby/gems/1.9.1/gems/activemodel-3.0.0)" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="[gem] activesupport (v3.0.0, C:/Users/Santhosh/AppData/Ruby191/lib/ruby/gems/1.9.1/gems/activesupport-3.0.0)" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="[gem] arel (v1.0.1, C:/Users/Santhosh/AppData/Ruby191/lib/ruby/gems/1.9.1/gems/arel-1.0.1)" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="[gem] bundler (v1.0.0, C:/Users/Santhosh/AppData/Ruby191/lib/ruby/gems/1.9.1/gems/bundler-1.0.0)" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="[gem] calendar_date_select (v1.16.1, C:/Users/Santhosh/AppData/Ruby191/lib/ruby/gems/1.9.1/gems/calendar_date_select-1.16.1)" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="[gem] color (v1.4.1, C:/Users/Santhosh/AppData/Ruby191/lib/ruby/gems/1.9.1/gems/color-1.4.1)" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="[gem] crack (v0.1.8, C:/Users/Santhosh/AppData/Ruby191/lib/ruby/gems/1.9.1/gems/crack-0.1.8)" level="application" />
@@ -183,7 +180,6 @@
     <orderEntry type="library" scope="PROVIDED" name="[gem] oauth (v0.4.3, C:/Users/Santhosh/AppData/Ruby191/lib/ruby/gems/1.9.1/gems/oauth-0.4.3)" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="[gem] oauth-plugin (v0.3.14, C:/Users/Santhosh/AppData/Ruby191/lib/ruby/gems/1.9.1/gems/oauth-plugin-0.3.14)" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="[gem] pg (v0.9.0, C:/Users/Santhosh/AppData/Ruby191/lib/ruby/gems/1.9.1/gems/pg-0.9.0-x86-mingw32)" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="[gem] railties (v3.0.0, C:/Users/Santhosh/AppData/Ruby191/lib/ruby/gems/1.9.1/gems/railties-3.0.0)" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="[gem] rcov (v0.9.8, C:/Users/Santhosh/AppData/Ruby191/lib/ruby/gems/1.9.1/gems/rcov-0.9.8)" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="[gem] ruby-hmac (v0.4.0, C:/Users/Santhosh/AppData/Ruby191/lib/ruby/gems/1.9.1/gems/ruby-hmac-0.4.0)" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="[gem] thoughtbot-shoulda (v2.11.1, C:/Users/Santhosh/AppData/Ruby191/lib/ruby/gems/1.9.1/gems/thoughtbot-shoulda-2.11.1)" level="application" />
@@ -198,10 +194,6 @@
     <orderEntry type="library" scope="PROVIDED" name="[gem] activesupport (v2.3.8, C:/Users/Santhosh/AppData/Ruby191/lib/ruby/gems/1.9.1/gems/activesupport-2.3.8)" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="[gem] rack (v1.1.0, C:/Users/Santhosh/AppData/Ruby191/lib/ruby/gems/1.9.1/gems/rack-1.1.0)" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="[gem] rails (v2.3.8, C:/Users/Santhosh/AppData/Ruby191/lib/ruby/gems/1.9.1/gems/rails-2.3.8)" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="[gem] activeresource (v3.0.0, C:/Users/Santhosh/AppData/Ruby191/lib/ruby/gems/1.9.1/gems/activeresource-3.0.0)" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="[gem] rails (v3.0.0, C:/Users/Santhosh/AppData/Ruby191/lib/ruby/gems/1.9.1/gems/rails-3.0.0)" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="[gem] actionmailer (v3.0.0, C:/Users/Santhosh/AppData/Ruby191/lib/ruby/gems/1.9.1/gems/actionmailer-3.0.0)" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="[gem] activerecord (v3.0.0, C:/Users/Santhosh/AppData/Ruby191/lib/ruby/gems/1.9.1/gems/activerecord-3.0.0)" level="application" />
   </component>
 </module>
 

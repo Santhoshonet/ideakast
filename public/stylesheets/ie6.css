@@ -34,17 +34,17 @@ body.life-cycles .nav li.last a.life-cycles {
 #share .input-text, #share .input-textarea {
   width: 437px; }
 #share .footer .tab span.dn {
-  background-image: url(../images/icn/14-arrow-dn.gif); }
+  background-image: url(../images/14-arrow-dn.gif); }
 #share .footer .tab span.up {
-  background-image: url(../images/icn/14-arrow-up.gif); }
+  background-image: url(../images/14-arrow-up.gif); }
 #share .footer .tab:hover span.dn {
-  background-image: url(../images/icn/14-arrow-dn-hover.gif); }
+  background-image: url(../images/14-arrow-dn-hover.gif); }
 #share .footer .tab:hover span.up {
-  background-image: url(../images/icn/14-arrow-up-hover.gif); }
+  background-image: url(../images/14-arrow-up-hover.gif); }
 #share .footer .tab:active span.dn {
-  background-image: url(../images/icn/14-arrow-dn-active.gif); }
+  background-image: url(../images/14-arrow-dn-active.gif); }
 #share .footer .tab:active span.up {
-  background-image: url(../images/icn/14-arrow-up-active.gif); }
+  background-image: url(../images/14-arrow-up-active.gif); }
 
 .panel .header h2 {
   width: 450px; }
@@ -123,7 +123,7 @@ input.big {
   height: 23px; }
 
 a.admin {
-  background-image: url(../images/icn/16-admin.gif); }
+  background-image: url(../images/16-admin.gif); }
 
 h1#logo a {
   background-image: url(../images/bby-ideax-logo.gif); }
@@ -153,30 +153,30 @@ h1#logo a {
   background-image: url(../images/instruction-4-read.gif); }
 
 h2.icon.comments {
-  background-image: url(../images/icn/24-comment.gif); }
+  background-image: url(../images/24-comment.gif); }
 h2.icon.nearby {
-  background-image: url(../images/icn/24-pin.gif); }
+  background-image: url(../images/24-pin.gif); }
 h2.icon.top-rated {
-  background-image: url(../images/icn/24-heart.gif); }
+  background-image: url(../images/24-heart.gif); }
 h2.icon.recent {
-  background-image: url(../images/icn/24-clock.gif); }
+  background-image: url(../images/24-clock.gif); }
 h2.icon.tag {
-  background-image: url(../images/icn/24-tag.gif); }
+  background-image: url(../images/24-tag.gif); }
 h2.icon.user {
-  background-image: url(../images/icn/24-user.gif); }
+  background-image: url(../images/24-user.gif); }
   h2.icon.user.admin {
-    background-image: url(../images/icn/24-user-admin.gif); }
+    background-image: url(../images/24-user-admin.gif); }
 h2.icon.user-edit {
-  background-image: url(../images/icn/24-user-edit.gif); }
+  background-image: url(../images/24-user-edit.gif); }
 
 h3.icon.nearby, a.icon.nearby {
-  background-image: url(../images/icn/16-pin.gif); }
+  background-image: url(../images/16-pin.gif); }
 h3.icon.popular, a.icon.popular {
-  background-image: url(../images/icn/16-heart.gif); }
+  background-image: url(../images/16-heart.gif); }
 h3.icon.recent, a.icon.recent {
-  background-image: url(../images/icn/16-clock.gif); }
+  background-image: url(../images/16-clock.gif); }
 h3.icon.user, a.icon.user {
-  background-image: url(../images/icn/16-user.gif); }
+  background-image: url(../images/16-user.gif); }
 
 .panel.summary .header .actions li {
   background: none; }
