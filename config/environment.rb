@@ -77,15 +77,15 @@ Rails::Initializer.run do |config|
 
   config.action_mailer.raise_delivery_errors = true
   config.action_mailer.delivery_method = :smtp
-  config.action_mailer.smtp_settings = {
-         :enable_starttls_auto => true,
-         :address => "smtp.gmail.com",
-         :port => 587, #465
-         :domain => 'itxsolutionsindia.com',
-         :user_name => 'santhosh@itxsolutionsindia.com',
-         :password => 'password@123',
-         :authentication => 'plain'
-  }
+  #config.action_mailer.smtp_settings = {
+  #       :enable_starttls_auto => true,
+  #       :address => "smtp.gmail.com",
+  #       :port => 587, #465
+  #       :domain => 'itxsolutionsindia.com',
+  #       :user_name => 'santhosh@itxsolutionsindia.com',
+  #       :password => 'password@123',
+  #       :authentication => 'plain'
+  #}
 
 
   # Only load the plugins named here, in the order given. By default, all plugins 
