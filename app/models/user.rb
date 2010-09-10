@@ -165,7 +165,10 @@ class User < ActiveRecord::Base
   end
   
   def reset_activation_code
-    self.activation_code = Digest::SHA1.hexdigest( Time.now.to_s.split(//).sort_by {rand}.join )
+    if self.activation_code.nil?
+      self.activation_code = Digest::SHA1.hexdigest( Time.now.to_s.split(//).sort_by {rand}.join )
+    end
+    
   end
   
   def admin?

@@ -3,6 +3,7 @@ class UserMailer < ActionMailer::Base
   def signup_notification(user)
     setup_email(user)
     @subject    += 'Please activate your new account'
+    puts user.activation_code
     @body[:url]  = activate_url(:activation_code => user.activation_code)
   end
   
