@@ -2,13 +2,34 @@
 <project version="4">
   <component name="ChangeListManager" verified="true">
     <list default="true" readonly="true" id="94afb3e0-708c-42f7-8a29-ad293f05e038" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/user_mailer.rb" afterPath="$PROJECT_DIR$/app/models/user_mailer.rb" />
-      <change type="DELETED" beforePath="C:\Users\Santhosh\Desktop\MyWorks\IdeaKast_ruby\IdeaKast_old\public\images\Peepcode - ActiveMerchant.pdf" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Santhosh\Desktop\MyWorks\IdeaKast_ruby\IdeaKast_old\vendor\plugins\ym4r_gm\lib\gm_plugin\overlay.rb" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Santhosh\Desktop\MyWorks\IdeaKast_ruby\IdeaKast_old\vendor\plugins\ym4r_gm\README" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Santhosh\Desktop\MyWorks\IdeaKast_ruby\IdeaKast_old\vendor\plugins\ym4r_gm\javascript\markerGroup.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Santhosh\Desktop\MyWorks\IdeaKast_ruby\IdeaKast_old\vendor\plugins\ym4r_gm\init.rb" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/log/development.log" afterPath="$PROJECT_DIR$/log/development.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/.rakeTasks" afterPath="$PROJECT_DIR$/.idea/.rakeTasks" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/user.rb" afterPath="$PROJECT_DIR$/app/models/user.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/initializers/rakismet.rb" afterPath="$PROJECT_DIR$/config/initializers/rakismet.rb" />
+      <change type="DELETED" beforePath="C:\Users\Santhosh\Desktop\MyWorks\IdeaKast_ruby\IdeaKast_old\vendor\plugins\ym4r_gm\gmaps_api_key.yml.sample" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Santhosh\Desktop\MyWorks\IdeaKast_ruby\IdeaKast_old\vendor\plugins\ym4r_gm\lib\gm_plugin\layer.rb" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Santhosh\Desktop\MyWorks\IdeaKast_ruby\IdeaKast_old\vendor\plugins\ym4r_gm\lib\gm_plugin\point.rb" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="DELETED" beforePath="C:\Users\Santhosh\Desktop\MyWorks\IdeaKast_ruby\IdeaKast_old\vendor\plugins\ym4r_gm\tasks\gm_tasks.rake" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/bbyidx.iml" afterPath="$PROJECT_DIR$/.idea/bbyidx.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/.generators" afterPath="$PROJECT_DIR$/.idea/.generators" />
+      <change type="DELETED" beforePath="C:\Users\Santhosh\Desktop\MyWorks\IdeaKast_ruby\IdeaKast_old\vendor\plugins\ym4r_gm\rakefile.rb" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Santhosh\Desktop\MyWorks\IdeaKast_ruby\IdeaKast_old\vendor\plugins\ym4r_gm\install.rb" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Santhosh\Desktop\MyWorks\IdeaKast_ruby\IdeaKast_old\vendor\plugins\ym4r_gm\lib\gm_plugin\helper.rb" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Santhosh\Desktop\MyWorks\IdeaKast_ruby\IdeaKast_old\vendor\plugins\ym4r_gm\lib\gm_plugin\key.rb" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/helpers/application_helper.rb" afterPath="$PROJECT_DIR$/app/helpers/application_helper.rb" />
+      <change type="DELETED" beforePath="C:\Users\Santhosh\Desktop\MyWorks\IdeaKast_ruby\IdeaKast_old\vendor\plugins\ym4r_gm\javascript\ym4r-gm.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Santhosh\Desktop\MyWorks\IdeaKast_ruby\IdeaKast_old\vendor\plugins\ym4r_gm\javascript\clusterer.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Santhosh\Desktop\MyWorks\IdeaKast_ruby\IdeaKast_old\vendor\plugins\ym4r_gm\lib\gm_plugin\geocoding.rb" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Santhosh\Desktop\MyWorks\IdeaKast_ruby\IdeaKast_old\vendor\plugins\ym4r_gm\lib\gm_plugin\map.rb" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gems" afterPath="$PROJECT_DIR$/.gems" />
+      <change type="DELETED" beforePath="C:\Users\Santhosh\Desktop\MyWorks\IdeaKast_ruby\IdeaKast_old\vendor\plugins\ym4r_gm\lib\ym4r_gm.rb" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Santhosh\Desktop\MyWorks\IdeaKast_ruby\IdeaKast_old\vendor\plugins\ym4r_gm\javascript\wms-gs.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Santhosh\Desktop\MyWorks\IdeaKast_ruby\IdeaKast_old\vendor\plugins\ym4r_gm\javascript\geoRssOverlay.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Santhosh\Desktop\MyWorks\IdeaKast_ruby\IdeaKast_old\vendor\plugins\ym4r_gm\test\gm_test.rb" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Santhosh\Desktop\MyWorks\IdeaKast_ruby\IdeaKast_old\vendor\plugins\ym4r_gm\lib\gm_plugin\mapping.rb" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Santhosh\Desktop\MyWorks\IdeaKast_ruby\IdeaKast_old\vendor\plugins\ym4r_gm\lib\gm_plugin\control.rb" afterPath="" />
     </list>
     <ignored path=".idea/workspace.xml" />
     <ignored path="bbyidx.iws" />
@@ -51,37 +72,46 @@
   <component name="FileColors" enabled="true" enabledForTabs="true" />
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="comments_controller.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/controllers/comments_controller.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="6" selection-start="336" selection-end="336" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="show.html.haml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/ideas/show.html.haml">
+        <entry file="file://$PROJECT_DIR$/app/views/home/show.html.haml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="0" selection-start="297" selection-end="297" vertical-scroll-proportion="0.0">
+            <state line="74" column="0" selection-start="2323" selection-end="2323" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="comment.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/models/comment.rb">
+      <file leaf-file-name="maps_controller.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/controllers/maps_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="46" column="35" selection-start="1186" selection-end="1186" vertical-scroll-proportion="0.0">
+            <state line="26" column="0" selection-start="785" selection-end="785" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="rakismet.rb" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/config/initializers/rakismet.rb">
+      <file leaf-file-name="application_helper.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/helpers/application_helper.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="3" column="0" selection-start="110" selection-end="110" vertical-scroll-proportion="0.06311361">
+            <state line="70" column="35" selection-start="2361" selection-end="2361" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gems" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gems">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="14" column="20" selection-start="327" selection-end="327" vertical-scroll-proportion="0.6104651">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="README" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/README">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="4" column="11" selection-start="150" selection-end="150" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -97,8 +127,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/views/admin/currents/edit.html.haml" />
-        <option value="$PROJECT_DIR$/app/views/admin/ideas/index.html.haml" />
         <option value="$PROJECT_DIR$/app/views/tags/index.html.haml" />
         <option value="$PROJECT_DIR$/public/stylesheets/forms.css" />
         <option value="$PROJECT_DIR$/public/stylesheets/ie6.css" />
@@ -113,6 +141,8 @@
         <option value="$PROJECT_DIR$/app/models/user_mailer.rb" />
         <option value="$PROJECT_DIR$/app/models/user.rb" />
         <option value="$PROJECT_DIR$/config/initializers/rakismet.rb" />
+        <option value="$PROJECT_DIR$/app/helpers/application_helper.rb" />
+        <option value="$PROJECT_DIR$/.gems" />
       </list>
     </option>
   </component>
@@ -139,7 +169,7 @@
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1" splitterProportion="0.5">
       <flattenPackages />
-      <showMembers />
+      <showMembers ProjectPane="true" />
       <showModules />
       <showLibraryContents />
       <hideEmptyPackages />
@@ -177,25 +207,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="IdeaKast_old" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="IdeaKast_old" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="images" />
+              <option name="myItemId" value="config" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -475,19 +487,39 @@
     <myIsUseDefaultProxy>false</myIsUseDefaultProxy>
     <supportedVersion>125</supportedVersion>
   </component>
+  <component name="TodoView" selected-index="0">
+    <todo-panel id="selected-file">
+      <are-packages-shown value="false" />
+      <are-modules-shown value="false" />
+      <flatten-packages value="false" />
+      <is-autoscroll-to-source value="false" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="false" />
+      <are-modules-shown value="false" />
+      <flatten-packages value="false" />
+      <is-autoscroll-to-source value="false" />
+    </todo-panel>
+    <todo-panel id="default-changelist">
+      <are-packages-shown value="false" />
+      <are-modules-shown value="false" />
+      <flatten-packages value="false" />
+      <is-autoscroll-to-source value="false" />
+    </todo-panel>
+  </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1430" height="870" extended-state="1" />
+    <frame x="-8" y="-8" width="1456" height="886" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4370861" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.28552097" sideWeight="0.99610895" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.7044818" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.28476822" sideWeight="0.99610895" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20545977" sideWeight="0.49797022" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.174189" sideWeight="0.49006623" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4925575" sideWeight="0.9992816" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.50066227" sideWeight="0.9992816" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -528,85 +560,9 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/config/environments/development.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="0" selection-start="754" selection-end="803" vertical-scroll-proportion="0.8237288" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/helpers/search_helper.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="110" column="58" selection-start="4469" selection-end="4469" vertical-scroll-proportion="0.41501975" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/log/development.log">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/tasks/seed.rake">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="46" column="55" selection-start="2049" selection-end="2049" vertical-scroll-proportion="0.96638656" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/user.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="170" column="4" selection-start="5895" selection-end="5895" vertical-scroll-proportion="3.4498568">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/user_observer.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="57" selection-start="129" selection-end="144" vertical-scroll-proportion="0.06311361">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/user_mailer.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="52" selection-start="449" selection-end="449" vertical-scroll-proportion="0.29453015">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/user_mailer/activation.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="28" selection-start="117" selection-end="117" vertical-scroll-proportion="0.08683068">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/users_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="139" column="19" selection-start="3615" selection-end="3615" vertical-scroll-proportion="0.6423562">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/environment.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="153" column="26" selection-start="6161" selection-end="6161" vertical-scroll-proportion="0.57924265">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/comments_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="6" selection-start="336" selection-end="336" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/ideas/show.html.haml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="0" selection-start="297" selection-end="297" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/comment.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="46" column="35" selection-start="1186" selection-end="1186" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -618,16 +574,100 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/home/show.html.haml">
+    <entry file="file://$PROJECT_DIR$/config/initializers/rakismet.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="74" column="0" selection-start="2323" selection-end="2323" vertical-scroll-proportion="0.33333334">
+        <state line="3" column="0" selection-start="110" selection-end="110" vertical-scroll-proportion="0.06311361">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/initializers/rakismet.rb">
+    <entry file="file://$PROJECT_DIR$/app/models/comment.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="0" selection-start="110" selection-end="110" vertical-scroll-proportion="0.06311361">
+        <state line="46" column="35" selection-start="1186" selection-end="1186" vertical-scroll-proportion="0.49509117">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/ideas/show.html.haml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="0" selection-start="297" selection-end="297" vertical-scroll-proportion="0.15988779">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/comments_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="6" selection-start="336" selection-end="336" vertical-scroll-proportion="0.29453015">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.haml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="36" column="64" selection-start="1831" selection-end="1831" vertical-scroll-proportion="0.3982808">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/home/show.html.haml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="74" column="0" selection-start="2323" selection-end="2323" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="11" selection-start="150" selection-end="150" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/log/development.log">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1814" column="12" selection-start="228856" selection-end="228856" vertical-scroll-proportion="0.33333334">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/layouts/admin.html.haml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="27" column="43" selection-start="1078" selection-end="1078" vertical-scroll-proportion="0.79881656">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/environment.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="74" selection-start="432" selection-end="432" vertical-scroll-proportion="-6.1511626">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/gmaps_api_key.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="13" selection-start="388" selection-end="388" vertical-scroll-proportion="0.39244187">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/maps_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="26" column="0" selection-start="785" selection-end="785" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/helpers/application_helper.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="70" column="35" selection-start="2361" selection-end="2361" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gems">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="20" selection-start="327" selection-end="327" vertical-scroll-proportion="0.6104651">
           <folding />
         </state>
       </provider>
