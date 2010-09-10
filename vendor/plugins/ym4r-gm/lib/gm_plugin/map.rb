@@ -32,7 +32,7 @@ module Ym4r
         options[:local_search] = false unless options.has_key?(:local_search)
         api_key = ApiKey.get(options)
         a = "<script src=\"http://maps.google.com/maps?file=api&amp;v=2.x&amp;key=#{api_key}&amp;hl=#{options[:hl]}\" type=\"text/javascript\"></script>\n"
-        a << "<script src=\"#{ActionController::AbstractRequest.relative_url_root}/javascripts/ym4r-gm.js\" type=\"text/javascript\"></script>\n" unless options[:without_js]
+        a << "<script src=\"/javascripts/ym4r-gm.js\" type=\"text/javascript\"></script>\n" unless options[:without_js]
         a << "<style type=\"text/css\">\n v\:* { behavior:url(#default#VML);}\n</style>" if options[:with_vml]
         a << "<script src=\"http://www.google.com/uds/api?file=uds.js&amp;v=1.0\" type=\"text/javascript\"></script>" if options[:local_search]
         a << "<script src=\"http://www.google.com/uds/solutions/localsearch/gmlocalsearch.js\" type=\"text/javascript\"></script>\n" if options[:local_search]
@@ -70,7 +70,7 @@ module Ym4r
         @init << code
       end
 
-      #Initializes the controls: you can pass a hash with keys <tt>:small_map</tt>, <tt>:large_map</tt>, <tt>:small_zoom</tt>, <tt>:scale</tt>, <tt>:map_type</tt>, <tt>:overview_map</tt> and a boolean value as the value (usually true, since the control is not displayed by default), <tt>:local_search</tt> and <tt>:local_search_options</tt>
+      #Initializes the controls: you can pass a hash with keys <tt>:small_map</tt>, <tt>:large_map</tt>, <tt>:small_zoom</tt>, <tt>:scale</tt>, <tt>:map_type</tt>, <tt>:overview_map</tt> and a boolean value as the value (usually true, since the control is not displayed by default) and <tt>:local_search</tt>
       def control_init(controls = {})
         @init_end << add_control(GSmallMapControl.new) if controls[:small_map]
         @init_end << add_control(GLargeMapControl.new) if controls[:large_map]
@@ -79,7 +79,7 @@ module Ym4r
         @init_end << add_control(GMapTypeControl.new) if controls[:map_type]
         @init_end << add_control(GHierarchicalMapTypeControl.new) if controls[:hierarchical_map_type]        
         @init_end << add_control(GOverviewMapControl.new) if controls[:overview_map]
-        @init_end << add_control(GLocalSearchControl.new(controls[:anchor], controls[:offset_width], controls[:offset_height], controls[:local_search_options])) if controls[:local_search]
+        @init_end << add_control(GLocalSearchControl.new(controls[:anchor], controls[:offset_width], controls[:offset_height])) if controls[:local_search]
       end
       
       #Initializes the interface configuration: double-click zoom, dragging, continuous zoom,... You can pass a hash with keys <tt>:dragging</tt>, <tt>:info_window</tt>, <tt>:double_click_zoom</tt>, <tt>:continuous_zoom</tt> and <tt>:scroll_wheel_zoom</tt>. The values should be true or false. Check the google maps API doc to know what the default values are.
@@ -220,6 +220,19 @@ module Ym4r
         end
       end
       
+      # Simple GDirections support
+      def directions(div, dir_points)
+        @init << "dir_div = document.getElementById('#{div}');"
+        @init << "directions = new GDirections(#{@variable}, dir_div);"
+        @init << "dir_point_array = new Array;"
+        dir_points.each do |d|    
+            @init << "dir_point_array.push('#{d}');"
+        end
+        # Error Handling
+        @init << "GEvent.addListener(directions, 'error', handleErrors);"
+        
+        @init << "directions.loadFromWaypoints(dir_point_array);"
+      end
       #Outputs the initialization code for the map. By default, it outputs the script tags, performs the initialization in response to the onload event of the window and makes the map globally available. If you pass +true+ to the option key <tt>:full</tt>, the map will be setup in full screen, in which case it is not necessary (but not harmful) to set a size for the map div.
       def to_html(options = {})
         no_load = options[:no_load]

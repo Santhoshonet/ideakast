@@ -2354,3 +2354,560 @@ NameError (uninitialized constant ApplicationHelper::GMap):
 Rendered rescues/_trace (70.0ms)
 Rendered rescues/_request_and_response (1.0ms)
 Rendering rescues/layout (200)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+DEPRECATION WARNING: Giving :session_key to SessionStore is deprecated, please use :key instead. (called from new at C:/Users/Santhosh/AppData/Ruby191/lib/ruby/gems/1.9.1/gems/actionpack-2.3.8/lib/action_controller/middleware_stack.rb:72)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing HomeController#show (for 127.0.0.1 at 2010-09-10 16:25:37) [GET]
+  Parameters: {"controller"=>"home", "action"=>"show"}
+DEPRECATION WARNING: formatted_ideas_url() has been deprecated. Please pass format to the standard ideas_url method instead. (called from add_ideas_feed at C:/Users/Santhosh/Desktop/MyWorks/IdeaKast_ruby/IdeaKast_old/app/controllers/application_controller.rb:71)
+Rendering template within layouts/application
+Rendering home/show
+  [4;36;1mUser Load (3.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 15) LIMIT 1[0m
+DEPRECATION WARNING: The binding argument of #concat is no longer needed.  Please remove it from your views and helpers. (called from block in remote_form_for at C:/Users/Santhosh/Desktop/MyWorks/IdeaKast_ruby/IdeaKast_old/config/initializers/text_field_example.rb:57)
+Rendered ideas/_tag_editor (1.0ms)
+DEPRECATION WARNING: The binding argument of #concat is no longer needed.  Please remove it from your views and helpers. (called from block in remote_form_for at C:/Users/Santhosh/Desktop/MyWorks/IdeaKast_ruby/IdeaKast_old/config/initializers/text_field_example.rb:64)
+Rendered ideas/_new (15.0ms)
+  [4;35;1mIdea Load IDs For Limited Eager Loading (2.0ms)[0m   [0mSELECT * FROM (SELECT DISTINCT ON ("ideas".id) "ideas".id, ideas.rating AS alias_0, ideas.created_at AS alias_1 FROM "ideas" LEFT OUTER JOIN "users" ON "users".id = "ideas".inventor_id WHERE (users.state = 'active' and ideas.hidden = 'f' and ideas.duplicate_of_id is null) ) AS id_list ORDER BY id_list.alias_0 DESC, id_list.alias_1 DESC LIMIT 5 OFFSET 0[0m
+  [4;36;1mIdea Load Including Associations (3.0ms)[0m   [0;1mSELECT "ideas"."id" AS t0_r0, "ideas"."title" AS t0_r1, "ideas"."description" AS t0_r2, "ideas"."rating" AS t0_r3, "ideas"."inventor_id" AS t0_r4, "ideas"."created_at" AS t0_r5, "ideas"."updated_at" AS t0_r6, "ideas"."flagged" AS t0_r7, "ideas"."viewed" AS t0_r8, "ideas"."inappropriate_flags" AS t0_r9, "ideas"."hidden" AS t0_r10, "ideas"."decayed_at" AS t0_r11, "ideas"."life_cycle_step_id" AS t0_r12, "ideas"."status" AS t0_r13, "ideas"."duplicate_of_id" AS t0_r14, "ideas"."marked_spam" AS t0_r15, "ideas"."current_id" AS t0_r16, "ideas"."vectors" AS t0_r17, "users"."id" AS t1_r0, "users"."name" AS t1_r1, "users"."email" AS t1_r2, "users"."crypted_password" AS t1_r3, "users"."salt" AS t1_r4, "users"."created_at" AS t1_r5, "users"."updated_at" AS t1_r6, "users"."remember_token" AS t1_r7, "users"."remember_token_expires_at" AS t1_r8, "users"."activation_code" AS t1_r9, "users"."activated_at" AS t1_r10, "users"."state" AS t1_r11, "users"."deleted_at" AS t1_r12, "users"."zip_code" AS t1_r13, "users"."contribution_points" AS t1_r14, "users"."decayed_at" AS t1_r15, "users"."moderator" AS t1_r16, "users"."postal_code_id" AS t1_r17, "users"."twitter_handle" AS t1_r18, "users"."tweet_ideas" AS t1_r19, "users"."twitter_token" AS t1_r20, "users"."twitter_secret" AS t1_r21, "users"."fb_uid" AS t1_r22, "users"."fb_email_hash" AS t1_r23, "users"."notify_on_comments" AS t1_r24, "users"."notify_on_state" AS t1_r25, "users"."vectors" AS t1_r26, "postal_codes"."id" AS t2_r0, "postal_codes"."code" AS t2_r1, "postal_codes"."lat" AS t2_r2, "postal_codes"."lon" AS t2_r3, "tags"."id" AS t3_r0, "tags"."name" AS t3_r1 FROM "ideas" LEFT OUTER JOIN "users" ON "users".id = "ideas".inventor_id LEFT OUTER JOIN "postal_codes" ON "postal_codes".id = "users".postal_code_id LEFT OUTER JOIN "ideas_tags" ON "ideas_tags".idea_id = "ideas".id LEFT OUTER JOIN "tags" ON "tags".id = "ideas_tags".tag_id WHERE (users.state = 'active' and ideas.hidden = 'f' and ideas.duplicate_of_id is null) AND "ideas".id IN (1) ORDER BY ideas.rating DESC, ideas.created_at DESC[0m
+  [4;35;1mVote Load (1.0ms)[0m   [0mSELECT votes.idea_id FROM "votes" WHERE ("votes"."user_id" = 15) [0m
+Rendered votes/_vote (15.0ms)
+Rendered home/_idea (187.0ms)
+  [4;36;1mIdea Load IDs For Limited Eager Loading (1.0ms)[0m   [0;1mSELECT * FROM (SELECT DISTINCT ON ("ideas".id) "ideas".id, ideas.created_at AS alias_0 FROM "ideas" LEFT OUTER JOIN "users" ON "users".id = "ideas".inventor_id WHERE (users.state = 'active' and ideas.hidden = 'f' and ideas.duplicate_of_id is null) ) AS id_list ORDER BY id_list.alias_0 DESC LIMIT 5 OFFSET 0[0m
+  [4;35;1mIdea Load Including Associations (2.0ms)[0m   [0mSELECT "ideas"."id" AS t0_r0, "ideas"."title" AS t0_r1, "ideas"."description" AS t0_r2, "ideas"."rating" AS t0_r3, "ideas"."inventor_id" AS t0_r4, "ideas"."created_at" AS t0_r5, "ideas"."updated_at" AS t0_r6, "ideas"."flagged" AS t0_r7, "ideas"."viewed" AS t0_r8, "ideas"."inappropriate_flags" AS t0_r9, "ideas"."hidden" AS t0_r10, "ideas"."decayed_at" AS t0_r11, "ideas"."life_cycle_step_id" AS t0_r12, "ideas"."status" AS t0_r13, "ideas"."duplicate_of_id" AS t0_r14, "ideas"."marked_spam" AS t0_r15, "ideas"."current_id" AS t0_r16, "ideas"."vectors" AS t0_r17, "users"."id" AS t1_r0, "users"."name" AS t1_r1, "users"."email" AS t1_r2, "users"."crypted_password" AS t1_r3, "users"."salt" AS t1_r4, "users"."created_at" AS t1_r5, "users"."updated_at" AS t1_r6, "users"."remember_token" AS t1_r7, "users"."remember_token_expires_at" AS t1_r8, "users"."activation_code" AS t1_r9, "users"."activated_at" AS t1_r10, "users"."state" AS t1_r11, "users"."deleted_at" AS t1_r12, "users"."zip_code" AS t1_r13, "users"."contribution_points" AS t1_r14, "users"."decayed_at" AS t1_r15, "users"."moderator" AS t1_r16, "users"."postal_code_id" AS t1_r17, "users"."twitter_handle" AS t1_r18, "users"."tweet_ideas" AS t1_r19, "users"."twitter_token" AS t1_r20, "users"."twitter_secret" AS t1_r21, "users"."fb_uid" AS t1_r22, "users"."fb_email_hash" AS t1_r23, "users"."notify_on_comments" AS t1_r24, "users"."notify_on_state" AS t1_r25, "users"."vectors" AS t1_r26, "postal_codes"."id" AS t2_r0, "postal_codes"."code" AS t2_r1, "postal_codes"."lat" AS t2_r2, "postal_codes"."lon" AS t2_r3, "tags"."id" AS t3_r0, "tags"."name" AS t3_r1 FROM "ideas" LEFT OUTER JOIN "users" ON "users".id = "ideas".inventor_id LEFT OUTER JOIN "postal_codes" ON "postal_codes".id = "users".postal_code_id LEFT OUTER JOIN "ideas_tags" ON "ideas_tags".idea_id = "ideas".id LEFT OUTER JOIN "tags" ON "tags".id = "ideas_tags".tag_id WHERE (users.state = 'active' and ideas.hidden = 'f' and ideas.duplicate_of_id is null) AND "ideas".id IN (1) ORDER BY ideas.created_at DESC[0m
+Rendered votes/_vote (0.0ms)
+Rendered home/_idea (1.0ms)
+  [4;36;1mPostalCode Load (1.0ms)[0m   [0;1mSELECT * FROM "postal_codes" WHERE ("postal_codes"."id" = 30286) [0m
+  [4;35;1mIdea Load (2.0ms)[0m   [0mSELECT ideas.id,
+ pow(lat - (36.839209), 2) + pow(lon - (-76.09333), 2) as distance FROM "ideas" INNER JOIN "users" ON "users".id = "ideas".inventor_id INNER JOIN "postal_codes" ON "postal_codes".id = "users".postal_code_id WHERE (lat > 32.839209 and lat < 40.839209 and lon > -80.69333 and lon < -71.49333 and users.state = 'active' and ideas.hidden = 'f' and ideas.marked_spam = 'f') ORDER BY distance, ideas.created_at desc LIMIT 5[0m
+  [4;36;1mIdea Load (0.0ms)[0m   [0;1mSELECT * FROM "ideas" WHERE ("ideas"."id" = 1) [0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 15) [0m
+Rendered votes/_vote (0.0ms)
+Rendered home/_idea (2.0ms)
+Cached fragment hit: header (1.0ms)
+Cached fragment miss: header (1.0ms)
+Cached fragment hit: primary_nav (0.0ms)
+Cached fragment miss: primary_nav (0.0ms)
+Rendered shared/_header (9.0ms)
+Rendered shared/_flash_messages (3.0ms)
+Cached fragment hit: footer (0.0ms)
+Rendered custom/_footer (7.0ms)
+Rendered shared/_footer (18.0ms)
+Cached fragment miss: footer (0.0ms)
+Completed in 400ms (View: 381, DB: 16) | 200 OK [http://localhost/]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+DEPRECATION WARNING: Giving :session_key to SessionStore is deprecated, please use :key instead. (called from new at C:/Users/Santhosh/AppData/Ruby191/lib/ruby/gems/1.9.1/gems/actionpack-2.3.8/lib/action_controller/middleware_stack.rb:72)
+
+
+Processing MapsController#show (for 127.0.0.1 at 2010-09-10 16:25:53) [GET]
+  Parameters: {"controller"=>"maps", "action"=>"show"}
+DEPRECATION WARNING: formatted_ideas_url() has been deprecated. Please pass format to the standard ideas_url method instead. (called from add_ideas_feed at C:/Users/Santhosh/Desktop/MyWorks/IdeaKast_ruby/IdeaKast_old/app/controllers/application_controller.rb:71)
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 15) LIMIT 1[0m
+  [4;36;1mPostalCode Load (1.0ms)[0m   [0;1mSELECT * FROM "postal_codes" WHERE ("postal_codes"."id" = 30286) [0m
+  [4;35;1mIdea Load (4.0ms)[0m   [0mSELECT ideas.id,
+ pow(lat - (36.839209), 2) + pow(lon - (-76.09333), 2) as distance FROM "ideas" INNER JOIN "users" ON "users".id = "ideas".inventor_id INNER JOIN "postal_codes" ON "postal_codes".id = "users".postal_code_id WHERE (lat > 32.839209 and lat < 40.839209 and lon > -80.69333 and lon < -71.49333 and users.state = 'active' and ideas.hidden = 'f' and ideas.marked_spam = 'f') ORDER BY distance, ideas.created_at desc LIMIT 60[0m
+  [4;36;1mIdea Load (0.0ms)[0m   [0;1mSELECT * FROM "ideas" WHERE ("ideas"."id" = 1) [0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 15) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "postal_codes" WHERE ("postal_codes"."id" = 30286) [0m
+  [4;35;1mTag Load (1.0ms)[0m   [0mSELECT "tags".*, t0.idea_id as the_parent_record_id FROM "tags" INNER JOIN "ideas_tags" t0 ON "tags".id = t0.tag_id WHERE (t0.idea_id = 1) ORDER BY name[0m
+  [4;36;1mComment Load (2.0ms)[0m   [0;1mSELECT count(*) as comment_count, idea_id FROM "comments" INNER JOIN users ON users.id = comments.author_id WHERE (idea_id in (1) and hidden = 'f' and users.state = 'active') GROUP BY idea_id[0m
+
+NameError (uninitialized constant ApplicationHelper::GMap):
+  app/helpers/application_helper.rb:62:in `map_ideas'
+  app/controllers/maps_controller.rb:27:in `show'
+  haml (3.0.18) lib/sass/plugin/rack.rb:41:in `call'
+  <internal:prelude>:8:in `synchronize'
+  C:/Users/Santhosh/AppData/Ruby191/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  C:/Users/Santhosh/AppData/Ruby191/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  C:/Users/Santhosh/AppData/Ruby191/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendered rescues/_trace (66.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (200)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+DEPRECATION WARNING: Giving :session_key to SessionStore is deprecated, please use :key instead. (called from new at C:/Users/Santhosh/AppData/Ruby191/lib/ruby/gems/1.9.1/gems/actionpack-2.3.8/lib/action_controller/middleware_stack.rb:72)
+
+
+Processing MapsController#show (for 127.0.0.1 at 2010-09-10 16:27:09) [GET]
+  Parameters: {"controller"=>"maps", "action"=>"show"}
+DEPRECATION WARNING: formatted_ideas_url() has been deprecated. Please pass format to the standard ideas_url method instead. (called from add_ideas_feed at C:/Users/Santhosh/Desktop/MyWorks/IdeaKast_ruby/IdeaKast_old/app/controllers/application_controller.rb:71)
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 15) LIMIT 1[0m
+  [4;35;1mPostalCode Load (1.0ms)[0m   [0mSELECT * FROM "postal_codes" WHERE ("postal_codes"."id" = 30286) [0m
+  [4;36;1mIdea Load (3.0ms)[0m   [0;1mSELECT ideas.id,
+ pow(lat - (36.839209), 2) + pow(lon - (-76.09333), 2) as distance FROM "ideas" INNER JOIN "users" ON "users".id = "ideas".inventor_id INNER JOIN "postal_codes" ON "postal_codes".id = "users".postal_code_id WHERE (lat > 32.839209 and lat < 40.839209 and lon > -80.69333 and lon < -71.49333 and users.state = 'active' and ideas.hidden = 'f' and ideas.marked_spam = 'f') ORDER BY distance, ideas.created_at desc LIMIT 60[0m
+  [4;35;1mIdea Load (1.0ms)[0m   [0mSELECT * FROM "ideas" WHERE ("ideas"."id" = 1) [0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 15) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "postal_codes" WHERE ("postal_codes"."id" = 30286) [0m
+  [4;36;1mTag Load (1.0ms)[0m   [0;1mSELECT "tags".*, t0.idea_id as the_parent_record_id FROM "tags" INNER JOIN "ideas_tags" t0 ON "tags".id = t0.tag_id WHERE (t0.idea_id = 1) ORDER BY name[0m
+  [4;35;1mComment Load (1.0ms)[0m   [0mSELECT count(*) as comment_count, idea_id FROM "comments" INNER JOIN users ON users.id = comments.author_id WHERE (idea_id in (1) and hidden = 'f' and users.state = 'active') GROUP BY idea_id[0m
+
+NameError (uninitialized constant ApplicationHelper::GMap):
+  app/helpers/application_helper.rb:59:in `map_ideas'
+  app/controllers/maps_controller.rb:27:in `show'
+  haml (3.0.18) lib/sass/plugin/rack.rb:41:in `call'
+  <internal:prelude>:8:in `synchronize'
+  C:/Users/Santhosh/AppData/Ruby191/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  C:/Users/Santhosh/AppData/Ruby191/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  C:/Users/Santhosh/AppData/Ruby191/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendered rescues/_trace (132.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (200)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+DEPRECATION WARNING: Giving :session_key to SessionStore is deprecated, please use :key instead. (called from new at C:/Users/Santhosh/AppData/Ruby191/lib/ruby/gems/1.9.1/gems/actionpack-2.3.8/lib/action_controller/middleware_stack.rb:72)
+
+
+Processing HomeController#show (for 127.0.0.1 at 2010-09-10 16:27:18) [GET]
+  Parameters: {"controller"=>"home", "action"=>"show"}
+DEPRECATION WARNING: formatted_ideas_url() has been deprecated. Please pass format to the standard ideas_url method instead. (called from add_ideas_feed at C:/Users/Santhosh/Desktop/MyWorks/IdeaKast_ruby/IdeaKast_old/app/controllers/application_controller.rb:71)
+Rendering template within layouts/application
+Rendering home/show
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 15) LIMIT 1[0m
+DEPRECATION WARNING: The binding argument of #concat is no longer needed.  Please remove it from your views and helpers. (called from block in remote_form_for at C:/Users/Santhosh/Desktop/MyWorks/IdeaKast_ruby/IdeaKast_old/config/initializers/text_field_example.rb:57)
+Rendered ideas/_tag_editor (0.0ms)
+DEPRECATION WARNING: The binding argument of #concat is no longer needed.  Please remove it from your views and helpers. (called from block in remote_form_for at C:/Users/Santhosh/Desktop/MyWorks/IdeaKast_ruby/IdeaKast_old/config/initializers/text_field_example.rb:64)
+Rendered ideas/_new (3.0ms)
+  [4;36;1mIdea Load IDs For Limited Eager Loading (2.0ms)[0m   [0;1mSELECT * FROM (SELECT DISTINCT ON ("ideas".id) "ideas".id, ideas.rating AS alias_0, ideas.created_at AS alias_1 FROM "ideas" LEFT OUTER JOIN "users" ON "users".id = "ideas".inventor_id WHERE (users.state = 'active' and ideas.hidden = 'f' and ideas.duplicate_of_id is null) ) AS id_list ORDER BY id_list.alias_0 DESC, id_list.alias_1 DESC LIMIT 5 OFFSET 0[0m
+  [4;35;1mIdea Load Including Associations (3.0ms)[0m   [0mSELECT "ideas"."id" AS t0_r0, "ideas"."title" AS t0_r1, "ideas"."description" AS t0_r2, "ideas"."rating" AS t0_r3, "ideas"."inventor_id" AS t0_r4, "ideas"."created_at" AS t0_r5, "ideas"."updated_at" AS t0_r6, "ideas"."flagged" AS t0_r7, "ideas"."viewed" AS t0_r8, "ideas"."inappropriate_flags" AS t0_r9, "ideas"."hidden" AS t0_r10, "ideas"."decayed_at" AS t0_r11, "ideas"."life_cycle_step_id" AS t0_r12, "ideas"."status" AS t0_r13, "ideas"."duplicate_of_id" AS t0_r14, "ideas"."marked_spam" AS t0_r15, "ideas"."current_id" AS t0_r16, "ideas"."vectors" AS t0_r17, "users"."id" AS t1_r0, "users"."name" AS t1_r1, "users"."email" AS t1_r2, "users"."crypted_password" AS t1_r3, "users"."salt" AS t1_r4, "users"."created_at" AS t1_r5, "users"."updated_at" AS t1_r6, "users"."remember_token" AS t1_r7, "users"."remember_token_expires_at" AS t1_r8, "users"."activation_code" AS t1_r9, "users"."activated_at" AS t1_r10, "users"."state" AS t1_r11, "users"."deleted_at" AS t1_r12, "users"."zip_code" AS t1_r13, "users"."contribution_points" AS t1_r14, "users"."decayed_at" AS t1_r15, "users"."moderator" AS t1_r16, "users"."postal_code_id" AS t1_r17, "users"."twitter_handle" AS t1_r18, "users"."tweet_ideas" AS t1_r19, "users"."twitter_token" AS t1_r20, "users"."twitter_secret" AS t1_r21, "users"."fb_uid" AS t1_r22, "users"."fb_email_hash" AS t1_r23, "users"."notify_on_comments" AS t1_r24, "users"."notify_on_state" AS t1_r25, "users"."vectors" AS t1_r26, "postal_codes"."id" AS t2_r0, "postal_codes"."code" AS t2_r1, "postal_codes"."lat" AS t2_r2, "postal_codes"."lon" AS t2_r3, "tags"."id" AS t3_r0, "tags"."name" AS t3_r1 FROM "ideas" LEFT OUTER JOIN "users" ON "users".id = "ideas".inventor_id LEFT OUTER JOIN "postal_codes" ON "postal_codes".id = "users".postal_code_id LEFT OUTER JOIN "ideas_tags" ON "ideas_tags".idea_id = "ideas".id LEFT OUTER JOIN "tags" ON "tags".id = "ideas_tags".tag_id WHERE (users.state = 'active' and ideas.hidden = 'f' and ideas.duplicate_of_id is null) AND "ideas".id IN (1) ORDER BY ideas.rating DESC, ideas.created_at DESC[0m
+  [4;36;1mVote Load (1.0ms)[0m   [0;1mSELECT votes.idea_id FROM "votes" WHERE ("votes"."user_id" = 15) [0m
+Rendered votes/_vote (12.0ms)
+Rendered home/_idea (28.0ms)
+  [4;35;1mIdea Load IDs For Limited Eager Loading (1.0ms)[0m   [0mSELECT * FROM (SELECT DISTINCT ON ("ideas".id) "ideas".id, ideas.created_at AS alias_0 FROM "ideas" LEFT OUTER JOIN "users" ON "users".id = "ideas".inventor_id WHERE (users.state = 'active' and ideas.hidden = 'f' and ideas.duplicate_of_id is null) ) AS id_list ORDER BY id_list.alias_0 DESC LIMIT 5 OFFSET 0[0m
+  [4;36;1mIdea Load Including Associations (2.0ms)[0m   [0;1mSELECT "ideas"."id" AS t0_r0, "ideas"."title" AS t0_r1, "ideas"."description" AS t0_r2, "ideas"."rating" AS t0_r3, "ideas"."inventor_id" AS t0_r4, "ideas"."created_at" AS t0_r5, "ideas"."updated_at" AS t0_r6, "ideas"."flagged" AS t0_r7, "ideas"."viewed" AS t0_r8, "ideas"."inappropriate_flags" AS t0_r9, "ideas"."hidden" AS t0_r10, "ideas"."decayed_at" AS t0_r11, "ideas"."life_cycle_step_id" AS t0_r12, "ideas"."status" AS t0_r13, "ideas"."duplicate_of_id" AS t0_r14, "ideas"."marked_spam" AS t0_r15, "ideas"."current_id" AS t0_r16, "ideas"."vectors" AS t0_r17, "users"."id" AS t1_r0, "users"."name" AS t1_r1, "users"."email" AS t1_r2, "users"."crypted_password" AS t1_r3, "users"."salt" AS t1_r4, "users"."created_at" AS t1_r5, "users"."updated_at" AS t1_r6, "users"."remember_token" AS t1_r7, "users"."remember_token_expires_at" AS t1_r8, "users"."activation_code" AS t1_r9, "users"."activated_at" AS t1_r10, "users"."state" AS t1_r11, "users"."deleted_at" AS t1_r12, "users"."zip_code" AS t1_r13, "users"."contribution_points" AS t1_r14, "users"."decayed_at" AS t1_r15, "users"."moderator" AS t1_r16, "users"."postal_code_id" AS t1_r17, "users"."twitter_handle" AS t1_r18, "users"."tweet_ideas" AS t1_r19, "users"."twitter_token" AS t1_r20, "users"."twitter_secret" AS t1_r21, "users"."fb_uid" AS t1_r22, "users"."fb_email_hash" AS t1_r23, "users"."notify_on_comments" AS t1_r24, "users"."notify_on_state" AS t1_r25, "users"."vectors" AS t1_r26, "postal_codes"."id" AS t2_r0, "postal_codes"."code" AS t2_r1, "postal_codes"."lat" AS t2_r2, "postal_codes"."lon" AS t2_r3, "tags"."id" AS t3_r0, "tags"."name" AS t3_r1 FROM "ideas" LEFT OUTER JOIN "users" ON "users".id = "ideas".inventor_id LEFT OUTER JOIN "postal_codes" ON "postal_codes".id = "users".postal_code_id LEFT OUTER JOIN "ideas_tags" ON "ideas_tags".idea_id = "ideas".id LEFT OUTER JOIN "tags" ON "tags".id = "ideas_tags".tag_id WHERE (users.state = 'active' and ideas.hidden = 'f' and ideas.duplicate_of_id is null) AND "ideas".id IN (1) ORDER BY ideas.created_at DESC[0m
+Rendered votes/_vote (0.0ms)
+Rendered home/_idea (2.0ms)
+  [4;35;1mPostalCode Load (1.0ms)[0m   [0mSELECT * FROM "postal_codes" WHERE ("postal_codes"."id" = 30286) [0m
+  [4;36;1mIdea Load (3.0ms)[0m   [0;1mSELECT ideas.id,
+ pow(lat - (36.839209), 2) + pow(lon - (-76.09333), 2) as distance FROM "ideas" INNER JOIN "users" ON "users".id = "ideas".inventor_id INNER JOIN "postal_codes" ON "postal_codes".id = "users".postal_code_id WHERE (lat > 32.839209 and lat < 40.839209 and lon > -80.69333 and lon < -71.49333 and users.state = 'active' and ideas.hidden = 'f' and ideas.marked_spam = 'f') ORDER BY distance, ideas.created_at desc LIMIT 5[0m
+  [4;35;1mIdea Load (1.0ms)[0m   [0mSELECT * FROM "ideas" WHERE ("ideas"."id" = 1) [0m
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 15) [0m
+Rendered votes/_vote (0.0ms)
+Rendered home/_idea (3.0ms)
+Cached fragment hit: header (0.0ms)
+Cached fragment hit: primary_nav (0.0ms)
+Rendered shared/_header (2.0ms)
+Rendered shared/_flash_messages (0.0ms)
+Cached fragment hit: footer (0.0ms)
+Completed in 113ms (View: 93, DB: 17) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+DEPRECATION WARNING: Giving :session_key to SessionStore is deprecated, please use :key instead. (called from new at C:/Users/Santhosh/AppData/Ruby191/lib/ruby/gems/1.9.1/gems/actionpack-2.3.8/lib/action_controller/middleware_stack.rb:72)
+
+
+Processing MapsController#show (for 127.0.0.1 at 2010-09-10 16:27:31) [GET]
+  Parameters: {"controller"=>"maps", "action"=>"show"}
+DEPRECATION WARNING: formatted_ideas_url() has been deprecated. Please pass format to the standard ideas_url method instead. (called from add_ideas_feed at C:/Users/Santhosh/Desktop/MyWorks/IdeaKast_ruby/IdeaKast_old/app/controllers/application_controller.rb:71)
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 15) LIMIT 1[0m
+  [4;35;1mPostalCode Load (1.0ms)[0m   [0mSELECT * FROM "postal_codes" WHERE ("postal_codes"."id" = 30286) [0m
+  [4;36;1mIdea Load (3.0ms)[0m   [0;1mSELECT ideas.id,
+ pow(lat - (36.839209), 2) + pow(lon - (-76.09333), 2) as distance FROM "ideas" INNER JOIN "users" ON "users".id = "ideas".inventor_id INNER JOIN "postal_codes" ON "postal_codes".id = "users".postal_code_id WHERE (lat > 32.839209 and lat < 40.839209 and lon > -80.69333 and lon < -71.49333 and users.state = 'active' and ideas.hidden = 'f' and ideas.marked_spam = 'f') ORDER BY distance, ideas.created_at desc LIMIT 60[0m
+  [4;35;1mIdea Load (1.0ms)[0m   [0mSELECT * FROM "ideas" WHERE ("ideas"."id" = 1) [0m
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 15) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "postal_codes" WHERE ("postal_codes"."id" = 30286) [0m
+  [4;36;1mTag Load (2.0ms)[0m   [0;1mSELECT "tags".*, t0.idea_id as the_parent_record_id FROM "tags" INNER JOIN "ideas_tags" t0 ON "tags".id = t0.tag_id WHERE (t0.idea_id = 1) ORDER BY name[0m
+  [4;35;1mComment Load (1.0ms)[0m   [0mSELECT count(*) as comment_count, idea_id FROM "comments" INNER JOIN users ON users.id = comments.author_id WHERE (idea_id in (1) and hidden = 'f' and users.state = 'active') GROUP BY idea_id[0m
+
+NameError (uninitialized constant ApplicationHelper::GMap):
+  app/helpers/application_helper.rb:59:in `map_ideas'
+  app/controllers/maps_controller.rb:27:in `show'
+  haml (3.0.18) lib/sass/plugin/rack.rb:41:in `call'
+  <internal:prelude>:8:in `synchronize'
+  C:/Users/Santhosh/AppData/Ruby191/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  C:/Users/Santhosh/AppData/Ruby191/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  C:/Users/Santhosh/AppData/Ruby191/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendered rescues/_trace (66.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (200)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+DEPRECATION WARNING: Giving :session_key to SessionStore is deprecated, please use :key instead. (called from new at C:/Users/Santhosh/AppData/Ruby191/lib/ruby/gems/1.9.1/gems/actionpack-2.3.8/lib/action_controller/middleware_stack.rb:72)
+
+
+Processing HomeController#show (for 127.0.0.1 at 2010-09-10 16:28:47) [GET]
+  Parameters: {"controller"=>"home", "action"=>"show"}
+DEPRECATION WARNING: formatted_ideas_url() has been deprecated. Please pass format to the standard ideas_url method instead. (called from add_ideas_feed at C:/Users/Santhosh/Desktop/MyWorks/IdeaKast_ruby/IdeaKast_old/app/controllers/application_controller.rb:71)
+Rendering template within layouts/application
+Rendering home/show
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 15) LIMIT 1[0m
+DEPRECATION WARNING: The binding argument of #concat is no longer needed.  Please remove it from your views and helpers. (called from block in remote_form_for at C:/Users/Santhosh/Desktop/MyWorks/IdeaKast_ruby/IdeaKast_old/config/initializers/text_field_example.rb:57)
+Rendered ideas/_tag_editor (0.0ms)
+DEPRECATION WARNING: The binding argument of #concat is no longer needed.  Please remove it from your views and helpers. (called from block in remote_form_for at C:/Users/Santhosh/Desktop/MyWorks/IdeaKast_ruby/IdeaKast_old/config/initializers/text_field_example.rb:64)
+Rendered ideas/_new (3.0ms)
+  [4;36;1mIdea Load IDs For Limited Eager Loading (2.0ms)[0m   [0;1mSELECT * FROM (SELECT DISTINCT ON ("ideas".id) "ideas".id, ideas.rating AS alias_0, ideas.created_at AS alias_1 FROM "ideas" LEFT OUTER JOIN "users" ON "users".id = "ideas".inventor_id WHERE (users.state = 'active' and ideas.hidden = 'f' and ideas.duplicate_of_id is null) ) AS id_list ORDER BY id_list.alias_0 DESC, id_list.alias_1 DESC LIMIT 5 OFFSET 0[0m
+  [4;35;1mIdea Load Including Associations (3.0ms)[0m   [0mSELECT "ideas"."id" AS t0_r0, "ideas"."title" AS t0_r1, "ideas"."description" AS t0_r2, "ideas"."rating" AS t0_r3, "ideas"."inventor_id" AS t0_r4, "ideas"."created_at" AS t0_r5, "ideas"."updated_at" AS t0_r6, "ideas"."flagged" AS t0_r7, "ideas"."viewed" AS t0_r8, "ideas"."inappropriate_flags" AS t0_r9, "ideas"."hidden" AS t0_r10, "ideas"."decayed_at" AS t0_r11, "ideas"."life_cycle_step_id" AS t0_r12, "ideas"."status" AS t0_r13, "ideas"."duplicate_of_id" AS t0_r14, "ideas"."marked_spam" AS t0_r15, "ideas"."current_id" AS t0_r16, "ideas"."vectors" AS t0_r17, "users"."id" AS t1_r0, "users"."name" AS t1_r1, "users"."email" AS t1_r2, "users"."crypted_password" AS t1_r3, "users"."salt" AS t1_r4, "users"."created_at" AS t1_r5, "users"."updated_at" AS t1_r6, "users"."remember_token" AS t1_r7, "users"."remember_token_expires_at" AS t1_r8, "users"."activation_code" AS t1_r9, "users"."activated_at" AS t1_r10, "users"."state" AS t1_r11, "users"."deleted_at" AS t1_r12, "users"."zip_code" AS t1_r13, "users"."contribution_points" AS t1_r14, "users"."decayed_at" AS t1_r15, "users"."moderator" AS t1_r16, "users"."postal_code_id" AS t1_r17, "users"."twitter_handle" AS t1_r18, "users"."tweet_ideas" AS t1_r19, "users"."twitter_token" AS t1_r20, "users"."twitter_secret" AS t1_r21, "users"."fb_uid" AS t1_r22, "users"."fb_email_hash" AS t1_r23, "users"."notify_on_comments" AS t1_r24, "users"."notify_on_state" AS t1_r25, "users"."vectors" AS t1_r26, "postal_codes"."id" AS t2_r0, "postal_codes"."code" AS t2_r1, "postal_codes"."lat" AS t2_r2, "postal_codes"."lon" AS t2_r3, "tags"."id" AS t3_r0, "tags"."name" AS t3_r1 FROM "ideas" LEFT OUTER JOIN "users" ON "users".id = "ideas".inventor_id LEFT OUTER JOIN "postal_codes" ON "postal_codes".id = "users".postal_code_id LEFT OUTER JOIN "ideas_tags" ON "ideas_tags".idea_id = "ideas".id LEFT OUTER JOIN "tags" ON "tags".id = "ideas_tags".tag_id WHERE (users.state = 'active' and ideas.hidden = 'f' and ideas.duplicate_of_id is null) AND "ideas".id IN (1) ORDER BY ideas.rating DESC, ideas.created_at DESC[0m
+  [4;36;1mVote Load (1.0ms)[0m   [0;1mSELECT votes.idea_id FROM "votes" WHERE ("votes"."user_id" = 15) [0m
+Rendered votes/_vote (13.0ms)
+Rendered home/_idea (27.0ms)
+  [4;35;1mIdea Load IDs For Limited Eager Loading (1.0ms)[0m   [0mSELECT * FROM (SELECT DISTINCT ON ("ideas".id) "ideas".id, ideas.created_at AS alias_0 FROM "ideas" LEFT OUTER JOIN "users" ON "users".id = "ideas".inventor_id WHERE (users.state = 'active' and ideas.hidden = 'f' and ideas.duplicate_of_id is null) ) AS id_list ORDER BY id_list.alias_0 DESC LIMIT 5 OFFSET 0[0m
+  [4;36;1mIdea Load Including Associations (2.0ms)[0m   [0;1mSELECT "ideas"."id" AS t0_r0, "ideas"."title" AS t0_r1, "ideas"."description" AS t0_r2, "ideas"."rating" AS t0_r3, "ideas"."inventor_id" AS t0_r4, "ideas"."created_at" AS t0_r5, "ideas"."updated_at" AS t0_r6, "ideas"."flagged" AS t0_r7, "ideas"."viewed" AS t0_r8, "ideas"."inappropriate_flags" AS t0_r9, "ideas"."hidden" AS t0_r10, "ideas"."decayed_at" AS t0_r11, "ideas"."life_cycle_step_id" AS t0_r12, "ideas"."status" AS t0_r13, "ideas"."duplicate_of_id" AS t0_r14, "ideas"."marked_spam" AS t0_r15, "ideas"."current_id" AS t0_r16, "ideas"."vectors" AS t0_r17, "users"."id" AS t1_r0, "users"."name" AS t1_r1, "users"."email" AS t1_r2, "users"."crypted_password" AS t1_r3, "users"."salt" AS t1_r4, "users"."created_at" AS t1_r5, "users"."updated_at" AS t1_r6, "users"."remember_token" AS t1_r7, "users"."remember_token_expires_at" AS t1_r8, "users"."activation_code" AS t1_r9, "users"."activated_at" AS t1_r10, "users"."state" AS t1_r11, "users"."deleted_at" AS t1_r12, "users"."zip_code" AS t1_r13, "users"."contribution_points" AS t1_r14, "users"."decayed_at" AS t1_r15, "users"."moderator" AS t1_r16, "users"."postal_code_id" AS t1_r17, "users"."twitter_handle" AS t1_r18, "users"."tweet_ideas" AS t1_r19, "users"."twitter_token" AS t1_r20, "users"."twitter_secret" AS t1_r21, "users"."fb_uid" AS t1_r22, "users"."fb_email_hash" AS t1_r23, "users"."notify_on_comments" AS t1_r24, "users"."notify_on_state" AS t1_r25, "users"."vectors" AS t1_r26, "postal_codes"."id" AS t2_r0, "postal_codes"."code" AS t2_r1, "postal_codes"."lat" AS t2_r2, "postal_codes"."lon" AS t2_r3, "tags"."id" AS t3_r0, "tags"."name" AS t3_r1 FROM "ideas" LEFT OUTER JOIN "users" ON "users".id = "ideas".inventor_id LEFT OUTER JOIN "postal_codes" ON "postal_codes".id = "users".postal_code_id LEFT OUTER JOIN "ideas_tags" ON "ideas_tags".idea_id = "ideas".id LEFT OUTER JOIN "tags" ON "tags".id = "ideas_tags".tag_id WHERE (users.state = 'active' and ideas.hidden = 'f' and ideas.duplicate_of_id is null) AND "ideas".id IN (1) ORDER BY ideas.created_at DESC[0m
+Rendered votes/_vote (0.0ms)
+Rendered home/_idea (2.0ms)
+  [4;35;1mPostalCode Load (1.0ms)[0m   [0mSELECT * FROM "postal_codes" WHERE ("postal_codes"."id" = 30286) [0m
+  [4;36;1mIdea Load (2.0ms)[0m   [0;1mSELECT ideas.id,
+ pow(lat - (36.839209), 2) + pow(lon - (-76.09333), 2) as distance FROM "ideas" INNER JOIN "users" ON "users".id = "ideas".inventor_id INNER JOIN "postal_codes" ON "postal_codes".id = "users".postal_code_id WHERE (lat > 32.839209 and lat < 40.839209 and lon > -80.69333 and lon < -71.49333 and users.state = 'active' and ideas.hidden = 'f' and ideas.marked_spam = 'f') ORDER BY distance, ideas.created_at desc LIMIT 5[0m
+  [4;35;1mIdea Load (1.0ms)[0m   [0mSELECT * FROM "ideas" WHERE ("ideas"."id" = 1) [0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 15) [0m
+Rendered votes/_vote (0.0ms)
+Rendered home/_idea (2.0ms)
+Cached fragment hit: header (0.0ms)
+Cached fragment hit: primary_nav (0.0ms)
+Rendered shared/_header (2.0ms)
+Rendered shared/_flash_messages (0.0ms)
+Cached fragment hit: footer (0.0ms)
+Completed in 109ms (View: 91, DB: 14) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+DEPRECATION WARNING: Giving :session_key to SessionStore is deprecated, please use :key instead. (called from new at C:/Users/Santhosh/AppData/Ruby191/lib/ruby/gems/1.9.1/gems/actionpack-2.3.8/lib/action_controller/middleware_stack.rb:72)
+
+
+Processing MapsController#show (for 127.0.0.1 at 2010-09-10 16:29:04) [GET]
+  Parameters: {"controller"=>"maps", "action"=>"show"}
+DEPRECATION WARNING: formatted_ideas_url() has been deprecated. Please pass format to the standard ideas_url method instead. (called from add_ideas_feed at C:/Users/Santhosh/Desktop/MyWorks/IdeaKast_ruby/IdeaKast_old/app/controllers/application_controller.rb:71)
+  [4;36;1mUser Load (2.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 15) LIMIT 1[0m
+  [4;35;1mPostalCode Load (0.0ms)[0m   [0mSELECT * FROM "postal_codes" WHERE ("postal_codes"."id" = 30286) [0m
+  [4;36;1mIdea Load (3.0ms)[0m   [0;1mSELECT ideas.id,
+ pow(lat - (36.839209), 2) + pow(lon - (-76.09333), 2) as distance FROM "ideas" INNER JOIN "users" ON "users".id = "ideas".inventor_id INNER JOIN "postal_codes" ON "postal_codes".id = "users".postal_code_id WHERE (lat > 32.839209 and lat < 40.839209 and lon > -80.69333 and lon < -71.49333 and users.state = 'active' and ideas.hidden = 'f' and ideas.marked_spam = 'f') ORDER BY distance, ideas.created_at desc LIMIT 60[0m
+  [4;35;1mIdea Load (1.0ms)[0m   [0mSELECT * FROM "ideas" WHERE ("ideas"."id" = 1) [0m
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 15) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "postal_codes" WHERE ("postal_codes"."id" = 30286) [0m
+  [4;36;1mTag Load (1.0ms)[0m   [0;1mSELECT "tags".*, t0.idea_id as the_parent_record_id FROM "tags" INNER JOIN "ideas_tags" t0 ON "tags".id = t0.tag_id WHERE (t0.idea_id = 1) ORDER BY name[0m
+  [4;35;1mComment Load (2.0ms)[0m   [0mSELECT count(*) as comment_count, idea_id FROM "comments" INNER JOIN users ON users.id = comments.author_id WHERE (idea_id in (1) and hidden = 'f' and users.state = 'active') GROUP BY idea_id[0m
+
+NameError (uninitialized constant ApplicationHelper::GMap):
+  app/helpers/application_helper.rb:59:in `map_ideas'
+  app/controllers/maps_controller.rb:27:in `show'
+  haml (3.0.18) lib/sass/plugin/rack.rb:41:in `call'
+  <internal:prelude>:8:in `synchronize'
+  C:/Users/Santhosh/AppData/Ruby191/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  C:/Users/Santhosh/AppData/Ruby191/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  C:/Users/Santhosh/AppData/Ruby191/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendered rescues/_trace (64.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (200)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+DEPRECATION WARNING: Giving :session_key to SessionStore is deprecated, please use :key instead. (called from new at C:/Users/Santhosh/AppData/Ruby191/lib/ruby/gems/1.9.1/gems/actionpack-2.3.8/lib/action_controller/middleware_stack.rb:72)
+
+
+Processing IdeasController#index (for 127.0.0.1 at 2010-09-10 16:31:46) [GET]
+  Parameters: {"controller"=>"ideas", "action"=>"index", "search"=>["top-rated"]}
+DEPRECATION WARNING: formatted_ideas_url() has been deprecated. Please pass format to the standard ideas_url method instead. (called from add_ideas_feed at C:/Users/Santhosh/Desktop/MyWorks/IdeaKast_ruby/IdeaKast_old/app/controllers/application_controller.rb:71)
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 15) LIMIT 1[0m
+  [4;36;1mIdea Load IDs For Limited Eager Loading (1.0ms)[0m   [0;1mSELECT * FROM (SELECT DISTINCT ON ("ideas".id) "ideas".id, ideas.rating AS alias_0, ideas.created_at AS alias_1 FROM "ideas" LEFT OUTER JOIN "users" ON "users".id = "ideas".inventor_id WHERE (users.state = 'active' and ideas.hidden = 'f' and ideas.duplicate_of_id is null) ) AS id_list ORDER BY id_list.alias_0 DESC, id_list.alias_1 DESC LIMIT 20 OFFSET 0[0m
+  [4;35;1mIdea Load Including Associations (3.0ms)[0m   [0mSELECT "ideas"."id" AS t0_r0, "ideas"."title" AS t0_r1, "ideas"."description" AS t0_r2, "ideas"."rating" AS t0_r3, "ideas"."inventor_id" AS t0_r4, "ideas"."created_at" AS t0_r5, "ideas"."updated_at" AS t0_r6, "ideas"."flagged" AS t0_r7, "ideas"."viewed" AS t0_r8, "ideas"."inappropriate_flags" AS t0_r9, "ideas"."hidden" AS t0_r10, "ideas"."decayed_at" AS t0_r11, "ideas"."life_cycle_step_id" AS t0_r12, "ideas"."status" AS t0_r13, "ideas"."duplicate_of_id" AS t0_r14, "ideas"."marked_spam" AS t0_r15, "ideas"."current_id" AS t0_r16, "ideas"."vectors" AS t0_r17, "users"."id" AS t1_r0, "users"."name" AS t1_r1, "users"."email" AS t1_r2, "users"."crypted_password" AS t1_r3, "users"."salt" AS t1_r4, "users"."created_at" AS t1_r5, "users"."updated_at" AS t1_r6, "users"."remember_token" AS t1_r7, "users"."remember_token_expires_at" AS t1_r8, "users"."activation_code" AS t1_r9, "users"."activated_at" AS t1_r10, "users"."state" AS t1_r11, "users"."deleted_at" AS t1_r12, "users"."zip_code" AS t1_r13, "users"."contribution_points" AS t1_r14, "users"."decayed_at" AS t1_r15, "users"."moderator" AS t1_r16, "users"."postal_code_id" AS t1_r17, "users"."twitter_handle" AS t1_r18, "users"."tweet_ideas" AS t1_r19, "users"."twitter_token" AS t1_r20, "users"."twitter_secret" AS t1_r21, "users"."fb_uid" AS t1_r22, "users"."fb_email_hash" AS t1_r23, "users"."notify_on_comments" AS t1_r24, "users"."notify_on_state" AS t1_r25, "users"."vectors" AS t1_r26, "postal_codes"."id" AS t2_r0, "postal_codes"."code" AS t2_r1, "postal_codes"."lat" AS t2_r2, "postal_codes"."lon" AS t2_r3, "tags"."id" AS t3_r0, "tags"."name" AS t3_r1 FROM "ideas" LEFT OUTER JOIN "users" ON "users".id = "ideas".inventor_id LEFT OUTER JOIN "postal_codes" ON "postal_codes".id = "users".postal_code_id LEFT OUTER JOIN "ideas_tags" ON "ideas_tags".idea_id = "ideas".id LEFT OUTER JOIN "tags" ON "tags".id = "ideas_tags".tag_id WHERE (users.state = 'active' and ideas.hidden = 'f' and ideas.duplicate_of_id is null) AND "ideas".id IN (1) ORDER BY ideas.rating DESC, ideas.created_at DESC[0m
+  [4;36;1mComment Load (1.0ms)[0m   [0;1mSELECT count(*) as comment_count, idea_id FROM "comments" INNER JOIN users ON users.id = comments.author_id WHERE (idea_id in (1) and hidden = 'f' and users.state = 'active') GROUP BY idea_id[0m
+Rendering template within layouts/application
+Rendering ideas/index
+  [4;35;1mRole Load (1.0ms)[0m   [0mSELECT "roles".* FROM "roles" INNER JOIN "roles_users" ON "roles".id = "roles_users".role_id WHERE ("roles"."name" = 'admin') AND (("roles_users".user_id = 15)) LIMIT 1[0m
+  [4;36;1mRole Load (0.0ms)[0m   [0;1mSELECT * FROM "roles" WHERE (name = 'admin' and authorizable_type IS NULL and authorizable_id IS NULL) LIMIT 1[0m
+  [4;35;1mRole Load (1.0ms)[0m   [0mSELECT "roles".* FROM "roles" INNER JOIN "roles_users" ON "roles".id = "roles_users".role_id WHERE (("roles_users".user_id = 15)) [0m
+  [4;36;1mVote Load (1.0ms)[0m   [0;1mSELECT votes.idea_id FROM "votes" WHERE ("votes"."user_id" = 15) [0m
+Rendered votes/_vote (13.0ms)
+Rendered inappropriate/_xxx (2.0ms)
+Rendered ideas/_idea (146.0ms)
+Rendered custom/_sidebar (2.0ms)
+  [4;35;1mTag Load (3.0ms)[0m   [0mSELECT tags.id,tags.name, count(*) AS idea_count FROM "tags" INNER JOIN "ideas_tags" ON "ideas_tags".tag_id = "tags".id INNER JOIN "ideas" ON "ideas".id = "ideas_tags".idea_id INNER JOIN "users" ON "users".id = "ideas".inventor_id WHERE ("ideas"."hidden" = 'f' AND "users"."state" = 'active') GROUP BY tags.id,tags.name ORDER BY idea_count DESC, tags.name LIMIT 10[0m
+Rendered tags/_tag (2.0ms)
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" WHERE (state = 'active' and (select count(*) from roles_users where roles_users.user_id = users.id) = 0) ORDER BY contribution_points desc LIMIT 10[0m
+Rendered shared/_contributor (2.0ms)
+Rendered shared/_sidebar (38.0ms)
+Cached fragment hit: header (0.0ms)
+Cached fragment hit: primary_nav (0.0ms)
+Rendered shared/_header (1.0ms)
+Rendered shared/_share_your_idea (8.0ms)
+Rendered shared/_flash_messages (0.0ms)
+Cached fragment hit: footer (0.0ms)
+Completed in 354ms (View: 225, DB: 14) | 200 OK [http://localhost/ideas/search/top-rated]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+DEPRECATION WARNING: Giving :session_key to SessionStore is deprecated, please use :key instead. (called from new at C:/Users/Santhosh/AppData/Ruby191/lib/ruby/gems/1.9.1/gems/actionpack-2.3.8/lib/action_controller/middleware_stack.rb:72)
+
+
+Processing IdeasController#index (for 127.0.0.1 at 2010-09-10 16:31:54) [GET]
+  Parameters: {"controller"=>"ideas", "action"=>"index", "search"=>["recent"]}
+DEPRECATION WARNING: formatted_ideas_url() has been deprecated. Please pass format to the standard ideas_url method instead. (called from add_ideas_feed at C:/Users/Santhosh/Desktop/MyWorks/IdeaKast_ruby/IdeaKast_old/app/controllers/application_controller.rb:71)
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 15) LIMIT 1[0m
+  [4;35;1mIdea Load IDs For Limited Eager Loading (2.0ms)[0m   [0mSELECT * FROM (SELECT DISTINCT ON ("ideas".id) "ideas".id, ideas.created_at AS alias_0 FROM "ideas" LEFT OUTER JOIN "users" ON "users".id = "ideas".inventor_id WHERE (users.state = 'active' and ideas.hidden = 'f' and ideas.duplicate_of_id is null) ) AS id_list ORDER BY id_list.alias_0 DESC LIMIT 20 OFFSET 0[0m
+  [4;36;1mIdea Load Including Associations (3.0ms)[0m   [0;1mSELECT "ideas"."id" AS t0_r0, "ideas"."title" AS t0_r1, "ideas"."description" AS t0_r2, "ideas"."rating" AS t0_r3, "ideas"."inventor_id" AS t0_r4, "ideas"."created_at" AS t0_r5, "ideas"."updated_at" AS t0_r6, "ideas"."flagged" AS t0_r7, "ideas"."viewed" AS t0_r8, "ideas"."inappropriate_flags" AS t0_r9, "ideas"."hidden" AS t0_r10, "ideas"."decayed_at" AS t0_r11, "ideas"."life_cycle_step_id" AS t0_r12, "ideas"."status" AS t0_r13, "ideas"."duplicate_of_id" AS t0_r14, "ideas"."marked_spam" AS t0_r15, "ideas"."current_id" AS t0_r16, "ideas"."vectors" AS t0_r17, "users"."id" AS t1_r0, "users"."name" AS t1_r1, "users"."email" AS t1_r2, "users"."crypted_password" AS t1_r3, "users"."salt" AS t1_r4, "users"."created_at" AS t1_r5, "users"."updated_at" AS t1_r6, "users"."remember_token" AS t1_r7, "users"."remember_token_expires_at" AS t1_r8, "users"."activation_code" AS t1_r9, "users"."activated_at" AS t1_r10, "users"."state" AS t1_r11, "users"."deleted_at" AS t1_r12, "users"."zip_code" AS t1_r13, "users"."contribution_points" AS t1_r14, "users"."decayed_at" AS t1_r15, "users"."moderator" AS t1_r16, "users"."postal_code_id" AS t1_r17, "users"."twitter_handle" AS t1_r18, "users"."tweet_ideas" AS t1_r19, "users"."twitter_token" AS t1_r20, "users"."twitter_secret" AS t1_r21, "users"."fb_uid" AS t1_r22, "users"."fb_email_hash" AS t1_r23, "users"."notify_on_comments" AS t1_r24, "users"."notify_on_state" AS t1_r25, "users"."vectors" AS t1_r26, "postal_codes"."id" AS t2_r0, "postal_codes"."code" AS t2_r1, "postal_codes"."lat" AS t2_r2, "postal_codes"."lon" AS t2_r3, "tags"."id" AS t3_r0, "tags"."name" AS t3_r1 FROM "ideas" LEFT OUTER JOIN "users" ON "users".id = "ideas".inventor_id LEFT OUTER JOIN "postal_codes" ON "postal_codes".id = "users".postal_code_id LEFT OUTER JOIN "ideas_tags" ON "ideas_tags".idea_id = "ideas".id LEFT OUTER JOIN "tags" ON "tags".id = "ideas_tags".tag_id WHERE (users.state = 'active' and ideas.hidden = 'f' and ideas.duplicate_of_id is null) AND "ideas".id IN (1) ORDER BY ideas.created_at DESC[0m
+  [4;35;1mComment Load (1.0ms)[0m   [0mSELECT count(*) as comment_count, idea_id FROM "comments" INNER JOIN users ON users.id = comments.author_id WHERE (idea_id in (1) and hidden = 'f' and users.state = 'active') GROUP BY idea_id[0m
+Rendering template within layouts/application
+Rendering ideas/index
+  [4;36;1mRole Load (1.0ms)[0m   [0;1mSELECT "roles".* FROM "roles" INNER JOIN "roles_users" ON "roles".id = "roles_users".role_id WHERE ("roles"."name" = 'admin') AND (("roles_users".user_id = 15)) LIMIT 1[0m
+  [4;35;1mRole Load (1.0ms)[0m   [0mSELECT * FROM "roles" WHERE (name = 'admin' and authorizable_type IS NULL and authorizable_id IS NULL) LIMIT 1[0m
+  [4;36;1mRole Load (0.0ms)[0m   [0;1mSELECT "roles".* FROM "roles" INNER JOIN "roles_users" ON "roles".id = "roles_users".role_id WHERE (("roles_users".user_id = 15)) [0m
+  [4;35;1mVote Load (1.0ms)[0m   [0mSELECT votes.idea_id FROM "votes" WHERE ("votes"."user_id" = 15) [0m
+Rendered votes/_vote (12.0ms)
+Rendered inappropriate/_xxx (1.0ms)
+Rendered ideas/_idea (55.0ms)
+Rendered custom/_sidebar (0.0ms)
+  [4;36;1mTag Load (1.0ms)[0m   [0;1mSELECT tags.id,tags.name, count(*) AS idea_count FROM "tags" INNER JOIN "ideas_tags" ON "ideas_tags".tag_id = "tags".id INNER JOIN "ideas" ON "ideas".id = "ideas_tags".idea_id INNER JOIN "users" ON "users".id = "ideas".inventor_id WHERE ("ideas"."hidden" = 'f' AND "users"."state" = 'active') GROUP BY tags.id,tags.name ORDER BY idea_count DESC, tags.name LIMIT 10[0m
+Rendered tags/_tag (1.0ms)
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" WHERE (state = 'active' and (select count(*) from roles_users where roles_users.user_id = users.id) = 0) ORDER BY contribution_points desc LIMIT 10[0m
+Rendered shared/_contributor (0.0ms)
+Rendered shared/_sidebar (8.0ms)
+Cached fragment hit: header (0.0ms)
+Cached fragment hit: primary_nav (0.0ms)
+Rendered shared/_header (2.0ms)
+Rendered shared/_share_your_idea (1.0ms)
+Rendered shared/_flash_messages (0.0ms)
+Cached fragment hit: footer (0.0ms)
+Completed in 128ms (View: 67, DB: 13) | 200 OK [http://localhost/ideas/search/recent]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+DEPRECATION WARNING: Giving :session_key to SessionStore is deprecated, please use :key instead. (called from new at C:/Users/Santhosh/AppData/Ruby191/lib/ruby/gems/1.9.1/gems/actionpack-2.3.8/lib/action_controller/middleware_stack.rb:72)
+
+
+Processing IdeasController#index (for 127.0.0.1 at 2010-09-10 16:32:01) [GET]
+  Parameters: {"controller"=>"ideas", "action"=>"index", "search"=>["recent"]}
+DEPRECATION WARNING: formatted_ideas_url() has been deprecated. Please pass format to the standard ideas_url method instead. (called from add_ideas_feed at C:/Users/Santhosh/Desktop/MyWorks/IdeaKast_ruby/IdeaKast_old/app/controllers/application_controller.rb:71)
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 15) LIMIT 1[0m
+  [4;36;1mIdea Load IDs For Limited Eager Loading (3.0ms)[0m   [0;1mSELECT * FROM (SELECT DISTINCT ON ("ideas".id) "ideas".id, ideas.created_at AS alias_0 FROM "ideas" LEFT OUTER JOIN "users" ON "users".id = "ideas".inventor_id WHERE (users.state = 'active' and ideas.hidden = 'f' and ideas.duplicate_of_id is null) ) AS id_list ORDER BY id_list.alias_0 DESC LIMIT 20 OFFSET 0[0m
+  [4;35;1mIdea Load Including Associations (4.0ms)[0m   [0mSELECT "ideas"."id" AS t0_r0, "ideas"."title" AS t0_r1, "ideas"."description" AS t0_r2, "ideas"."rating" AS t0_r3, "ideas"."inventor_id" AS t0_r4, "ideas"."created_at" AS t0_r5, "ideas"."updated_at" AS t0_r6, "ideas"."flagged" AS t0_r7, "ideas"."viewed" AS t0_r8, "ideas"."inappropriate_flags" AS t0_r9, "ideas"."hidden" AS t0_r10, "ideas"."decayed_at" AS t0_r11, "ideas"."life_cycle_step_id" AS t0_r12, "ideas"."status" AS t0_r13, "ideas"."duplicate_of_id" AS t0_r14, "ideas"."marked_spam" AS t0_r15, "ideas"."current_id" AS t0_r16, "ideas"."vectors" AS t0_r17, "users"."id" AS t1_r0, "users"."name" AS t1_r1, "users"."email" AS t1_r2, "users"."crypted_password" AS t1_r3, "users"."salt" AS t1_r4, "users"."created_at" AS t1_r5, "users"."updated_at" AS t1_r6, "users"."remember_token" AS t1_r7, "users"."remember_token_expires_at" AS t1_r8, "users"."activation_code" AS t1_r9, "users"."activated_at" AS t1_r10, "users"."state" AS t1_r11, "users"."deleted_at" AS t1_r12, "users"."zip_code" AS t1_r13, "users"."contribution_points" AS t1_r14, "users"."decayed_at" AS t1_r15, "users"."moderator" AS t1_r16, "users"."postal_code_id" AS t1_r17, "users"."twitter_handle" AS t1_r18, "users"."tweet_ideas" AS t1_r19, "users"."twitter_token" AS t1_r20, "users"."twitter_secret" AS t1_r21, "users"."fb_uid" AS t1_r22, "users"."fb_email_hash" AS t1_r23, "users"."notify_on_comments" AS t1_r24, "users"."notify_on_state" AS t1_r25, "users"."vectors" AS t1_r26, "postal_codes"."id" AS t2_r0, "postal_codes"."code" AS t2_r1, "postal_codes"."lat" AS t2_r2, "postal_codes"."lon" AS t2_r3, "tags"."id" AS t3_r0, "tags"."name" AS t3_r1 FROM "ideas" LEFT OUTER JOIN "users" ON "users".id = "ideas".inventor_id LEFT OUTER JOIN "postal_codes" ON "postal_codes".id = "users".postal_code_id LEFT OUTER JOIN "ideas_tags" ON "ideas_tags".idea_id = "ideas".id LEFT OUTER JOIN "tags" ON "tags".id = "ideas_tags".tag_id WHERE (users.state = 'active' and ideas.hidden = 'f' and ideas.duplicate_of_id is null) AND "ideas".id IN (1) ORDER BY ideas.created_at DESC[0m
+  [4;36;1mComment Load (2.0ms)[0m   [0;1mSELECT count(*) as comment_count, idea_id FROM "comments" INNER JOIN users ON users.id = comments.author_id WHERE (idea_id in (1) and hidden = 'f' and users.state = 'active') GROUP BY idea_id[0m
+Rendering template within layouts/application
+Rendering ideas/index
+  [4;35;1mRole Load (1.0ms)[0m   [0mSELECT "roles".* FROM "roles" INNER JOIN "roles_users" ON "roles".id = "roles_users".role_id WHERE ("roles"."name" = 'admin') AND (("roles_users".user_id = 15)) LIMIT 1[0m
+  [4;36;1mRole Load (0.0ms)[0m   [0;1mSELECT * FROM "roles" WHERE (name = 'admin' and authorizable_type IS NULL and authorizable_id IS NULL) LIMIT 1[0m
+  [4;35;1mRole Load (0.0ms)[0m   [0mSELECT "roles".* FROM "roles" INNER JOIN "roles_users" ON "roles".id = "roles_users".role_id WHERE (("roles_users".user_id = 15)) [0m
+  [4;36;1mVote Load (1.0ms)[0m   [0;1mSELECT votes.idea_id FROM "votes" WHERE ("votes"."user_id" = 15) [0m
+Rendered votes/_vote (12.0ms)
+Rendered inappropriate/_xxx (0.0ms)
+Rendered ideas/_idea (54.0ms)
+Rendered custom/_sidebar (1.0ms)
+  [4;35;1mTag Load (2.0ms)[0m   [0mSELECT tags.id,tags.name, count(*) AS idea_count FROM "tags" INNER JOIN "ideas_tags" ON "ideas_tags".tag_id = "tags".id INNER JOIN "ideas" ON "ideas".id = "ideas_tags".idea_id INNER JOIN "users" ON "users".id = "ideas".inventor_id WHERE ("ideas"."hidden" = 'f' AND "users"."state" = 'active') GROUP BY tags.id,tags.name ORDER BY idea_count DESC, tags.name LIMIT 10[0m
+Rendered tags/_tag (0.0ms)
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" WHERE (state = 'active' and (select count(*) from roles_users where roles_users.user_id = users.id) = 0) ORDER BY contribution_points desc LIMIT 10[0m
+Rendered shared/_contributor (1.0ms)
+Rendered shared/_sidebar (8.0ms)
+Cached fragment hit: header (0.0ms)
+Cached fragment hit: primary_nav (0.0ms)
+Rendered shared/_header (1.0ms)
+Rendered shared/_share_your_idea (2.0ms)
+Rendered shared/_flash_messages (1.0ms)
+Cached fragment hit: footer (0.0ms)
+Completed in 130ms (View: 66, DB: 15) | 200 OK [http://localhost/ideas/search/recent]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+DEPRECATION WARNING: Giving :session_key to SessionStore is deprecated, please use :key instead. (called from new at C:/Users/Santhosh/AppData/Ruby191/lib/ruby/gems/1.9.1/gems/actionpack-2.3.8/lib/action_controller/middleware_stack.rb:72)
+
+
+Processing CurrentsController#index (for 127.0.0.1 at 2010-09-10 16:32:03) [GET]
+  Parameters: {"controller"=>"currents", "action"=>"index"}
+DEPRECATION WARNING: formatted_ideas_url() has been deprecated. Please pass format to the standard ideas_url method instead. (called from add_ideas_feed at C:/Users/Santhosh/Desktop/MyWorks/IdeaKast_ruby/IdeaKast_old/app/controllers/application_controller.rb:71)
+  [4;36;1mCurrent Load (17.0ms)[0m   [0;1mSELECT * FROM "currents" WHERE (id != 1) [0m
+Rendering template within layouts/application
+Rendering currents/index
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 15) LIMIT 1[0m
+Rendered custom/_sidebar (4.0ms)
+  [4;36;1mTag Load (2.0ms)[0m   [0;1mSELECT tags.id,tags.name, count(*) AS idea_count FROM "tags" INNER JOIN "ideas_tags" ON "ideas_tags".tag_id = "tags".id INNER JOIN "ideas" ON "ideas".id = "ideas_tags".idea_id INNER JOIN "users" ON "users".id = "ideas".inventor_id WHERE ("ideas"."hidden" = 'f' AND "users"."state" = 'active') GROUP BY tags.id,tags.name ORDER BY idea_count DESC, tags.name LIMIT 10[0m
+Rendered tags/_tag (1.0ms)
+  [4;35;1mUser Load (2.0ms)[0m   [0mSELECT * FROM "users" WHERE (state = 'active' and (select count(*) from roles_users where roles_users.user_id = users.id) = 0) ORDER BY contribution_points desc LIMIT 10[0m
+Rendered shared/_contributor (7.0ms)
+Rendered shared/_sidebar (45.0ms)
+Cached fragment hit: header (0.0ms)
+Cached fragment hit: primary_nav (0.0ms)
+Rendered shared/_header (1.0ms)
+Rendered shared/_share_your_idea (2.0ms)
+Rendered shared/_flash_messages (0.0ms)
+Cached fragment hit: footer (0.0ms)
+Completed in 102ms (View: 62, DB: 23) | 200 OK [http://localhost/currents]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+DEPRECATION WARNING: Giving :session_key to SessionStore is deprecated, please use :key instead. (called from new at C:/Users/Santhosh/AppData/Ruby191/lib/ruby/gems/1.9.1/gems/actionpack-2.3.8/lib/action_controller/middleware_stack.rb:72)
+
+
+Processing HomeController#show (for 127.0.0.1 at 2010-09-10 16:32:08) [GET]
+  Parameters: {"controller"=>"home", "action"=>"show"}
+DEPRECATION WARNING: formatted_ideas_url() has been deprecated. Please pass format to the standard ideas_url method instead. (called from add_ideas_feed at C:/Users/Santhosh/Desktop/MyWorks/IdeaKast_ruby/IdeaKast_old/app/controllers/application_controller.rb:71)
+Rendering template within layouts/application
+Rendering home/show
+  [4;35;1mUser Load (2.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 15) LIMIT 1[0m
+DEPRECATION WARNING: The binding argument of #concat is no longer needed.  Please remove it from your views and helpers. (called from block in remote_form_for at C:/Users/Santhosh/Desktop/MyWorks/IdeaKast_ruby/IdeaKast_old/config/initializers/text_field_example.rb:57)
+Rendered ideas/_tag_editor (0.0ms)
+DEPRECATION WARNING: The binding argument of #concat is no longer needed.  Please remove it from your views and helpers. (called from block in remote_form_for at C:/Users/Santhosh/Desktop/MyWorks/IdeaKast_ruby/IdeaKast_old/config/initializers/text_field_example.rb:64)
+Rendered ideas/_new (3.0ms)
+  [4;36;1mIdea Load IDs For Limited Eager Loading (3.0ms)[0m   [0;1mSELECT * FROM (SELECT DISTINCT ON ("ideas".id) "ideas".id, ideas.rating AS alias_0, ideas.created_at AS alias_1 FROM "ideas" LEFT OUTER JOIN "users" ON "users".id = "ideas".inventor_id WHERE (users.state = 'active' and ideas.hidden = 'f' and ideas.duplicate_of_id is null) ) AS id_list ORDER BY id_list.alias_0 DESC, id_list.alias_1 DESC LIMIT 5 OFFSET 0[0m
+  [4;35;1mIdea Load Including Associations (3.0ms)[0m   [0mSELECT "ideas"."id" AS t0_r0, "ideas"."title" AS t0_r1, "ideas"."description" AS t0_r2, "ideas"."rating" AS t0_r3, "ideas"."inventor_id" AS t0_r4, "ideas"."created_at" AS t0_r5, "ideas"."updated_at" AS t0_r6, "ideas"."flagged" AS t0_r7, "ideas"."viewed" AS t0_r8, "ideas"."inappropriate_flags" AS t0_r9, "ideas"."hidden" AS t0_r10, "ideas"."decayed_at" AS t0_r11, "ideas"."life_cycle_step_id" AS t0_r12, "ideas"."status" AS t0_r13, "ideas"."duplicate_of_id" AS t0_r14, "ideas"."marked_spam" AS t0_r15, "ideas"."current_id" AS t0_r16, "ideas"."vectors" AS t0_r17, "users"."id" AS t1_r0, "users"."name" AS t1_r1, "users"."email" AS t1_r2, "users"."crypted_password" AS t1_r3, "users"."salt" AS t1_r4, "users"."created_at" AS t1_r5, "users"."updated_at" AS t1_r6, "users"."remember_token" AS t1_r7, "users"."remember_token_expires_at" AS t1_r8, "users"."activation_code" AS t1_r9, "users"."activated_at" AS t1_r10, "users"."state" AS t1_r11, "users"."deleted_at" AS t1_r12, "users"."zip_code" AS t1_r13, "users"."contribution_points" AS t1_r14, "users"."decayed_at" AS t1_r15, "users"."moderator" AS t1_r16, "users"."postal_code_id" AS t1_r17, "users"."twitter_handle" AS t1_r18, "users"."tweet_ideas" AS t1_r19, "users"."twitter_token" AS t1_r20, "users"."twitter_secret" AS t1_r21, "users"."fb_uid" AS t1_r22, "users"."fb_email_hash" AS t1_r23, "users"."notify_on_comments" AS t1_r24, "users"."notify_on_state" AS t1_r25, "users"."vectors" AS t1_r26, "postal_codes"."id" AS t2_r0, "postal_codes"."code" AS t2_r1, "postal_codes"."lat" AS t2_r2, "postal_codes"."lon" AS t2_r3, "tags"."id" AS t3_r0, "tags"."name" AS t3_r1 FROM "ideas" LEFT OUTER JOIN "users" ON "users".id = "ideas".inventor_id LEFT OUTER JOIN "postal_codes" ON "postal_codes".id = "users".postal_code_id LEFT OUTER JOIN "ideas_tags" ON "ideas_tags".idea_id = "ideas".id LEFT OUTER JOIN "tags" ON "tags".id = "ideas_tags".tag_id WHERE (users.state = 'active' and ideas.hidden = 'f' and ideas.duplicate_of_id is null) AND "ideas".id IN (1) ORDER BY ideas.rating DESC, ideas.created_at DESC[0m
+  [4;36;1mVote Load (1.0ms)[0m   [0;1mSELECT votes.idea_id FROM "votes" WHERE ("votes"."user_id" = 15) [0m
+Rendered votes/_vote (15.0ms)
+Rendered home/_idea (31.0ms)
+  [4;35;1mIdea Load IDs For Limited Eager Loading (1.0ms)[0m   [0mSELECT * FROM (SELECT DISTINCT ON ("ideas".id) "ideas".id, ideas.created_at AS alias_0 FROM "ideas" LEFT OUTER JOIN "users" ON "users".id = "ideas".inventor_id WHERE (users.state = 'active' and ideas.hidden = 'f' and ideas.duplicate_of_id is null) ) AS id_list ORDER BY id_list.alias_0 DESC LIMIT 5 OFFSET 0[0m
+  [4;36;1mIdea Load Including Associations (2.0ms)[0m   [0;1mSELECT "ideas"."id" AS t0_r0, "ideas"."title" AS t0_r1, "ideas"."description" AS t0_r2, "ideas"."rating" AS t0_r3, "ideas"."inventor_id" AS t0_r4, "ideas"."created_at" AS t0_r5, "ideas"."updated_at" AS t0_r6, "ideas"."flagged" AS t0_r7, "ideas"."viewed" AS t0_r8, "ideas"."inappropriate_flags" AS t0_r9, "ideas"."hidden" AS t0_r10, "ideas"."decayed_at" AS t0_r11, "ideas"."life_cycle_step_id" AS t0_r12, "ideas"."status" AS t0_r13, "ideas"."duplicate_of_id" AS t0_r14, "ideas"."marked_spam" AS t0_r15, "ideas"."current_id" AS t0_r16, "ideas"."vectors" AS t0_r17, "users"."id" AS t1_r0, "users"."name" AS t1_r1, "users"."email" AS t1_r2, "users"."crypted_password" AS t1_r3, "users"."salt" AS t1_r4, "users"."created_at" AS t1_r5, "users"."updated_at" AS t1_r6, "users"."remember_token" AS t1_r7, "users"."remember_token_expires_at" AS t1_r8, "users"."activation_code" AS t1_r9, "users"."activated_at" AS t1_r10, "users"."state" AS t1_r11, "users"."deleted_at" AS t1_r12, "users"."zip_code" AS t1_r13, "users"."contribution_points" AS t1_r14, "users"."decayed_at" AS t1_r15, "users"."moderator" AS t1_r16, "users"."postal_code_id" AS t1_r17, "users"."twitter_handle" AS t1_r18, "users"."tweet_ideas" AS t1_r19, "users"."twitter_token" AS t1_r20, "users"."twitter_secret" AS t1_r21, "users"."fb_uid" AS t1_r22, "users"."fb_email_hash" AS t1_r23, "users"."notify_on_comments" AS t1_r24, "users"."notify_on_state" AS t1_r25, "users"."vectors" AS t1_r26, "postal_codes"."id" AS t2_r0, "postal_codes"."code" AS t2_r1, "postal_codes"."lat" AS t2_r2, "postal_codes"."lon" AS t2_r3, "tags"."id" AS t3_r0, "tags"."name" AS t3_r1 FROM "ideas" LEFT OUTER JOIN "users" ON "users".id = "ideas".inventor_id LEFT OUTER JOIN "postal_codes" ON "postal_codes".id = "users".postal_code_id LEFT OUTER JOIN "ideas_tags" ON "ideas_tags".idea_id = "ideas".id LEFT OUTER JOIN "tags" ON "tags".id = "ideas_tags".tag_id WHERE (users.state = 'active' and ideas.hidden = 'f' and ideas.duplicate_of_id is null) AND "ideas".id IN (1) ORDER BY ideas.created_at DESC[0m
+Rendered votes/_vote (1.0ms)
+Rendered home/_idea (2.0ms)
+  [4;35;1mPostalCode Load (1.0ms)[0m   [0mSELECT * FROM "postal_codes" WHERE ("postal_codes"."id" = 30286) [0m
+  [4;36;1mIdea Load (2.0ms)[0m   [0;1mSELECT ideas.id,
+ pow(lat - (36.839209), 2) + pow(lon - (-76.09333), 2) as distance FROM "ideas" INNER JOIN "users" ON "users".id = "ideas".inventor_id INNER JOIN "postal_codes" ON "postal_codes".id = "users".postal_code_id WHERE (lat > 32.839209 and lat < 40.839209 and lon > -80.69333 and lon < -71.49333 and users.state = 'active' and ideas.hidden = 'f' and ideas.marked_spam = 'f') ORDER BY distance, ideas.created_at desc LIMIT 5[0m
+  [4;35;1mIdea Load (0.0ms)[0m   [0mSELECT * FROM "ideas" WHERE ("ideas"."id" = 1) [0m
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 15) [0m
+Rendered votes/_vote (0.0ms)
+Rendered home/_idea (3.0ms)
+Cached fragment hit: header (0.0ms)
+Cached fragment hit: primary_nav (0.0ms)
+Rendered shared/_header (1.0ms)
+Rendered shared/_flash_messages (0.0ms)
+Cached fragment hit: footer (0.0ms)
+Completed in 116ms (View: 96, DB: 16) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+DEPRECATION WARNING: Giving :session_key to SessionStore is deprecated, please use :key instead. (called from new at C:/Users/Santhosh/AppData/Ruby191/lib/ruby/gems/1.9.1/gems/actionpack-2.3.8/lib/action_controller/middleware_stack.rb:72)
+
+
+Processing MapsController#show (for 127.0.0.1 at 2010-09-10 16:32:14) [GET]
+  Parameters: {"controller"=>"maps", "action"=>"show"}
+DEPRECATION WARNING: formatted_ideas_url() has been deprecated. Please pass format to the standard ideas_url method instead. (called from add_ideas_feed at C:/Users/Santhosh/Desktop/MyWorks/IdeaKast_ruby/IdeaKast_old/app/controllers/application_controller.rb:71)
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 15) LIMIT 1[0m
+  [4;35;1mPostalCode Load (1.0ms)[0m   [0mSELECT * FROM "postal_codes" WHERE ("postal_codes"."id" = 30286) [0m
+  [4;36;1mIdea Load (2.0ms)[0m   [0;1mSELECT ideas.id,
+ pow(lat - (36.839209), 2) + pow(lon - (-76.09333), 2) as distance FROM "ideas" INNER JOIN "users" ON "users".id = "ideas".inventor_id INNER JOIN "postal_codes" ON "postal_codes".id = "users".postal_code_id WHERE (lat > 32.839209 and lat < 40.839209 and lon > -80.69333 and lon < -71.49333 and users.state = 'active' and ideas.hidden = 'f' and ideas.marked_spam = 'f') ORDER BY distance, ideas.created_at desc LIMIT 60[0m
+  [4;35;1mIdea Load (0.0ms)[0m   [0mSELECT * FROM "ideas" WHERE ("ideas"."id" = 1) [0m
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 15) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "postal_codes" WHERE ("postal_codes"."id" = 30286) [0m
+  [4;36;1mTag Load (1.0ms)[0m   [0;1mSELECT "tags".*, t0.idea_id as the_parent_record_id FROM "tags" INNER JOIN "ideas_tags" t0 ON "tags".id = t0.tag_id WHERE (t0.idea_id = 1) ORDER BY name[0m
+  [4;35;1mComment Load (1.0ms)[0m   [0mSELECT count(*) as comment_count, idea_id FROM "comments" INNER JOIN users ON users.id = comments.author_id WHERE (idea_id in (1) and hidden = 'f' and users.state = 'active') GROUP BY idea_id[0m
+
+NameError (uninitialized constant ApplicationHelper::GMap):
+  app/helpers/application_helper.rb:59:in `map_ideas'
+  app/controllers/maps_controller.rb:27:in `show'
+  haml (3.0.18) lib/sass/plugin/rack.rb:41:in `call'
+  <internal:prelude>:8:in `synchronize'
+  C:/Users/Santhosh/AppData/Ruby191/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  C:/Users/Santhosh/AppData/Ruby191/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  C:/Users/Santhosh/AppData/Ruby191/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendered rescues/_trace (65.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (200)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+DEPRECATION WARNING: Giving :session_key to SessionStore is deprecated, please use :key instead. (called from new at C:/Users/Santhosh/AppData/Ruby191/lib/ruby/gems/1.9.1/gems/actionpack-2.3.8/lib/action_controller/middleware_stack.rb:72)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing HomeController#show (for 127.0.0.1 at 2010-09-10 16:50:45) [GET]
+  Parameters: {"controller"=>"home", "action"=>"show"}
+DEPRECATION WARNING: formatted_ideas_url() has been deprecated. Please pass format to the standard ideas_url method instead. (called from add_ideas_feed at C:/Users/Santhosh/Desktop/MyWorks/IdeaKast_ruby/IdeaKast_old/app/controllers/application_controller.rb:71)
+Rendering template within layouts/application
+Rendering home/show
+  [4;36;1mUser Load (2.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 15) LIMIT 1[0m
+DEPRECATION WARNING: The binding argument of #concat is no longer needed.  Please remove it from your views and helpers. (called from block in remote_form_for at C:/Users/Santhosh/Desktop/MyWorks/IdeaKast_ruby/IdeaKast_old/config/initializers/text_field_example.rb:57)
+Rendered ideas/_tag_editor (1.0ms)
+DEPRECATION WARNING: The binding argument of #concat is no longer needed.  Please remove it from your views and helpers. (called from block in remote_form_for at C:/Users/Santhosh/Desktop/MyWorks/IdeaKast_ruby/IdeaKast_old/config/initializers/text_field_example.rb:64)
+Rendered ideas/_new (14.0ms)
+  [4;35;1mIdea Load IDs For Limited Eager Loading (2.0ms)[0m   [0mSELECT * FROM (SELECT DISTINCT ON ("ideas".id) "ideas".id, ideas.rating AS alias_0, ideas.created_at AS alias_1 FROM "ideas" LEFT OUTER JOIN "users" ON "users".id = "ideas".inventor_id WHERE (users.state = 'active' and ideas.hidden = 'f' and ideas.duplicate_of_id is null) ) AS id_list ORDER BY id_list.alias_0 DESC, id_list.alias_1 DESC LIMIT 5 OFFSET 0[0m
+  [4;36;1mIdea Load Including Associations (3.0ms)[0m   [0;1mSELECT "ideas"."id" AS t0_r0, "ideas"."title" AS t0_r1, "ideas"."description" AS t0_r2, "ideas"."rating" AS t0_r3, "ideas"."inventor_id" AS t0_r4, "ideas"."created_at" AS t0_r5, "ideas"."updated_at" AS t0_r6, "ideas"."flagged" AS t0_r7, "ideas"."viewed" AS t0_r8, "ideas"."inappropriate_flags" AS t0_r9, "ideas"."hidden" AS t0_r10, "ideas"."decayed_at" AS t0_r11, "ideas"."life_cycle_step_id" AS t0_r12, "ideas"."status" AS t0_r13, "ideas"."duplicate_of_id" AS t0_r14, "ideas"."marked_spam" AS t0_r15, "ideas"."current_id" AS t0_r16, "ideas"."vectors" AS t0_r17, "users"."id" AS t1_r0, "users"."name" AS t1_r1, "users"."email" AS t1_r2, "users"."crypted_password" AS t1_r3, "users"."salt" AS t1_r4, "users"."created_at" AS t1_r5, "users"."updated_at" AS t1_r6, "users"."remember_token" AS t1_r7, "users"."remember_token_expires_at" AS t1_r8, "users"."activation_code" AS t1_r9, "users"."activated_at" AS t1_r10, "users"."state" AS t1_r11, "users"."deleted_at" AS t1_r12, "users"."zip_code" AS t1_r13, "users"."contribution_points" AS t1_r14, "users"."decayed_at" AS t1_r15, "users"."moderator" AS t1_r16, "users"."postal_code_id" AS t1_r17, "users"."twitter_handle" AS t1_r18, "users"."tweet_ideas" AS t1_r19, "users"."twitter_token" AS t1_r20, "users"."twitter_secret" AS t1_r21, "users"."fb_uid" AS t1_r22, "users"."fb_email_hash" AS t1_r23, "users"."notify_on_comments" AS t1_r24, "users"."notify_on_state" AS t1_r25, "users"."vectors" AS t1_r26, "postal_codes"."id" AS t2_r0, "postal_codes"."code" AS t2_r1, "postal_codes"."lat" AS t2_r2, "postal_codes"."lon" AS t2_r3, "tags"."id" AS t3_r0, "tags"."name" AS t3_r1 FROM "ideas" LEFT OUTER JOIN "users" ON "users".id = "ideas".inventor_id LEFT OUTER JOIN "postal_codes" ON "postal_codes".id = "users".postal_code_id LEFT OUTER JOIN "ideas_tags" ON "ideas_tags".idea_id = "ideas".id LEFT OUTER JOIN "tags" ON "tags".id = "ideas_tags".tag_id WHERE (users.state = 'active' and ideas.hidden = 'f' and ideas.duplicate_of_id is null) AND "ideas".id IN (1) ORDER BY ideas.rating DESC, ideas.created_at DESC[0m
+  [4;35;1mVote Load (1.0ms)[0m   [0mSELECT votes.idea_id FROM "votes" WHERE ("votes"."user_id" = 15) [0m
+Rendered votes/_vote (15.0ms)
+Rendered home/_idea (182.0ms)
+  [4;36;1mIdea Load IDs For Limited Eager Loading (1.0ms)[0m   [0;1mSELECT * FROM (SELECT DISTINCT ON ("ideas".id) "ideas".id, ideas.created_at AS alias_0 FROM "ideas" LEFT OUTER JOIN "users" ON "users".id = "ideas".inventor_id WHERE (users.state = 'active' and ideas.hidden = 'f' and ideas.duplicate_of_id is null) ) AS id_list ORDER BY id_list.alias_0 DESC LIMIT 5 OFFSET 0[0m
+  [4;35;1mIdea Load Including Associations (1.0ms)[0m   [0mSELECT "ideas"."id" AS t0_r0, "ideas"."title" AS t0_r1, "ideas"."description" AS t0_r2, "ideas"."rating" AS t0_r3, "ideas"."inventor_id" AS t0_r4, "ideas"."created_at" AS t0_r5, "ideas"."updated_at" AS t0_r6, "ideas"."flagged" AS t0_r7, "ideas"."viewed" AS t0_r8, "ideas"."inappropriate_flags" AS t0_r9, "ideas"."hidden" AS t0_r10, "ideas"."decayed_at" AS t0_r11, "ideas"."life_cycle_step_id" AS t0_r12, "ideas"."status" AS t0_r13, "ideas"."duplicate_of_id" AS t0_r14, "ideas"."marked_spam" AS t0_r15, "ideas"."current_id" AS t0_r16, "ideas"."vectors" AS t0_r17, "users"."id" AS t1_r0, "users"."name" AS t1_r1, "users"."email" AS t1_r2, "users"."crypted_password" AS t1_r3, "users"."salt" AS t1_r4, "users"."created_at" AS t1_r5, "users"."updated_at" AS t1_r6, "users"."remember_token" AS t1_r7, "users"."remember_token_expires_at" AS t1_r8, "users"."activation_code" AS t1_r9, "users"."activated_at" AS t1_r10, "users"."state" AS t1_r11, "users"."deleted_at" AS t1_r12, "users"."zip_code" AS t1_r13, "users"."contribution_points" AS t1_r14, "users"."decayed_at" AS t1_r15, "users"."moderator" AS t1_r16, "users"."postal_code_id" AS t1_r17, "users"."twitter_handle" AS t1_r18, "users"."tweet_ideas" AS t1_r19, "users"."twitter_token" AS t1_r20, "users"."twitter_secret" AS t1_r21, "users"."fb_uid" AS t1_r22, "users"."fb_email_hash" AS t1_r23, "users"."notify_on_comments" AS t1_r24, "users"."notify_on_state" AS t1_r25, "users"."vectors" AS t1_r26, "postal_codes"."id" AS t2_r0, "postal_codes"."code" AS t2_r1, "postal_codes"."lat" AS t2_r2, "postal_codes"."lon" AS t2_r3, "tags"."id" AS t3_r0, "tags"."name" AS t3_r1 FROM "ideas" LEFT OUTER JOIN "users" ON "users".id = "ideas".inventor_id LEFT OUTER JOIN "postal_codes" ON "postal_codes".id = "users".postal_code_id LEFT OUTER JOIN "ideas_tags" ON "ideas_tags".idea_id = "ideas".id LEFT OUTER JOIN "tags" ON "tags".id = "ideas_tags".tag_id WHERE (users.state = 'active' and ideas.hidden = 'f' and ideas.duplicate_of_id is null) AND "ideas".id IN (1) ORDER BY ideas.created_at DESC[0m
+Rendered votes/_vote (0.0ms)
+Rendered home/_idea (1.0ms)
+  [4;36;1mPostalCode Load (1.0ms)[0m   [0;1mSELECT * FROM "postal_codes" WHERE ("postal_codes"."id" = 30286) [0m
+  [4;35;1mIdea Load (2.0ms)[0m   [0mSELECT ideas.id,
+ pow(lat - (36.839209), 2) + pow(lon - (-76.09333), 2) as distance FROM "ideas" INNER JOIN "users" ON "users".id = "ideas".inventor_id INNER JOIN "postal_codes" ON "postal_codes".id = "users".postal_code_id WHERE (lat > 32.839209 and lat < 40.839209 and lon > -80.69333 and lon < -71.49333 and users.state = 'active' and ideas.hidden = 'f' and ideas.marked_spam = 'f') ORDER BY distance, ideas.created_at desc LIMIT 5[0m
+  [4;36;1mIdea Load (1.0ms)[0m   [0;1mSELECT * FROM "ideas" WHERE ("ideas"."id" = 1) [0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 15) [0m
+Rendered votes/_vote (0.0ms)
+Rendered home/_idea (2.0ms)
+Cached fragment hit: header (0.0ms)
+Cached fragment miss: header (0.0ms)
+Cached fragment hit: primary_nav (0.0ms)
+Cached fragment miss: primary_nav (0.0ms)
+Rendered shared/_header (11.0ms)
+Rendered shared/_flash_messages (3.0ms)
+Cached fragment hit: footer (0.0ms)
+Rendered custom/_footer (7.0ms)
+Rendered shared/_footer (16.0ms)
+Cached fragment miss: footer (0.0ms)
+Completed in 391ms (View: 374, DB: 14) | 200 OK [http://localhost/]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+DEPRECATION WARNING: Giving :session_key to SessionStore is deprecated, please use :key instead. (called from new at C:/Users/Santhosh/AppData/Ruby191/lib/ruby/gems/1.9.1/gems/actionpack-2.3.8/lib/action_controller/middleware_stack.rb:72)
+
+
+Processing MapsController#show (for 127.0.0.1 at 2010-09-10 16:50:52) [GET]
+  Parameters: {"controller"=>"maps", "action"=>"show"}
+DEPRECATION WARNING: formatted_ideas_url() has been deprecated. Please pass format to the standard ideas_url method instead. (called from add_ideas_feed at C:/Users/Santhosh/Desktop/MyWorks/IdeaKast_ruby/IdeaKast_old/app/controllers/application_controller.rb:71)
+  [4;35;1mUser Load (2.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 15) LIMIT 1[0m
+  [4;36;1mPostalCode Load (1.0ms)[0m   [0;1mSELECT * FROM "postal_codes" WHERE ("postal_codes"."id" = 30286) [0m
+  [4;35;1mIdea Load (3.0ms)[0m   [0mSELECT ideas.id,
+ pow(lat - (36.839209), 2) + pow(lon - (-76.09333), 2) as distance FROM "ideas" INNER JOIN "users" ON "users".id = "ideas".inventor_id INNER JOIN "postal_codes" ON "postal_codes".id = "users".postal_code_id WHERE (lat > 32.839209 and lat < 40.839209 and lon > -80.69333 and lon < -71.49333 and users.state = 'active' and ideas.hidden = 'f' and ideas.marked_spam = 'f') ORDER BY distance, ideas.created_at desc LIMIT 60[0m
+  [4;36;1mIdea Load (0.0ms)[0m   [0;1mSELECT * FROM "ideas" WHERE ("ideas"."id" = 1) [0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 15) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "postal_codes" WHERE ("postal_codes"."id" = 30286) [0m
+  [4;35;1mTag Load (1.0ms)[0m   [0mSELECT "tags".*, t0.idea_id as the_parent_record_id FROM "tags" INNER JOIN "ideas_tags" t0 ON "tags".id = t0.tag_id WHERE (t0.idea_id = 1) ORDER BY name[0m
+  [4;36;1mComment Load (2.0ms)[0m   [0;1mSELECT count(*) as comment_count, idea_id FROM "comments" INNER JOIN users ON users.id = comments.author_id WHERE (idea_id in (1) and hidden = 'f' and users.state = 'active') GROUP BY idea_id[0m
+  [4;35;1mRole Load (1.0ms)[0m   [0mSELECT "roles".* FROM "roles" INNER JOIN "roles_users" ON "roles".id = "roles_users".role_id WHERE ("roles"."name" = 'admin') AND (("roles_users".user_id = 15)) LIMIT 1[0m
+  [4;36;1mRole Load (0.0ms)[0m   [0;1mSELECT * FROM "roles" WHERE (name = 'admin' and authorizable_type IS NULL and authorizable_id IS NULL) LIMIT 1[0m
+  [4;35;1mRole Load (0.0ms)[0m   [0mSELECT "roles".* FROM "roles" INNER JOIN "roles_users" ON "roles".id = "roles_users".role_id WHERE (("roles_users".user_id = 15)) [0m
+  [4;36;1mVote Load (1.0ms)[0m   [0;1mSELECT votes.idea_id FROM "votes" WHERE ("votes"."user_id" = 15) [0m
+Rendered votes/_vote (13.0ms)
+Rendered inappropriate/_xxx (2.0ms)
+Rendered ideas/_idea (144.0ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT "roles".* FROM "roles" INNER JOIN "roles_users" ON "roles".id = "roles_users".role_id WHERE ("roles"."name" = 'admin') AND (("roles_users".user_id = 15)) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "roles" WHERE (name = 'admin' and authorizable_type IS NULL and authorizable_id IS NULL) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT "roles".* FROM "roles" INNER JOIN "roles_users" ON "roles".id = "roles_users".role_id WHERE (("roles_users".user_id = 15)) [0m
+Rendered maps/_idea_popup (153.0ms)
+Rendering template within layouts/application
+Rendering maps/show
+DEPRECATION WARNING: The binding argument of #concat is no longer needed.  Please remove it from your views and helpers. (called from block in remote_form_for at C:/Users/Santhosh/Desktop/MyWorks/IdeaKast_ruby/IdeaKast_old/config/initializers/text_field_example.rb:57)
+DEPRECATION WARNING: The binding argument of #concat is no longer needed.  Please remove it from your views and helpers. (called from block in remote_form_for at C:/Users/Santhosh/Desktop/MyWorks/IdeaKast_ruby/IdeaKast_old/config/initializers/text_field_example.rb:64)
+Rendered custom/_sidebar (2.0ms)
+  [4;36;1mTag Load (2.0ms)[0m   [0;1mSELECT tags.id,tags.name, count(*) AS idea_count FROM "tags" INNER JOIN "ideas_tags" ON "ideas_tags".tag_id = "tags".id INNER JOIN "ideas" ON "ideas".id = "ideas_tags".idea_id INNER JOIN "users" ON "users".id = "ideas".inventor_id WHERE ("ideas"."hidden" = 'f' AND "users"."state" = 'active') GROUP BY tags.id,tags.name ORDER BY idea_count DESC, tags.name LIMIT 10[0m
+Rendered tags/_tag (2.0ms)
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" WHERE (state = 'active' and (select count(*) from roles_users where roles_users.user_id = users.id) = 0) ORDER BY contribution_points desc LIMIT 10[0m
+Rendered shared/_contributor (2.0ms)
+Rendered shared/_sidebar (37.0ms)
+Cached fragment hit: header (0.0ms)
+Cached fragment hit: primary_nav (0.0ms)
+Rendered shared/_header (1.0ms)
+Rendered shared/_share_your_idea (9.0ms)
+Rendered shared/_flash_messages (0.0ms)
+Cached fragment hit: footer (0.0ms)
+Completed in 306ms (View: 75, DB: 3) | 200 OK [http://localhost/map]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+DEPRECATION WARNING: Giving :session_key to SessionStore is deprecated, please use :key instead. (called from new at C:/Users/Santhosh/AppData/Ruby191/lib/ruby/gems/1.9.1/gems/actionpack-2.3.8/lib/action_controller/middleware_stack.rb:72)
+
+
+Processing SessionsController#destroy (for 127.0.0.1 at 2010-09-10 16:51:07) [GET]
+  Parameters: {"controller"=>"sessions", "action"=>"destroy"}
+DEPRECATION WARNING: formatted_ideas_url() has been deprecated. Please pass format to the standard ideas_url method instead. (called from add_ideas_feed at C:/Users/Santhosh/Desktop/MyWorks/IdeaKast_ruby/IdeaKast_old/app/controllers/application_controller.rb:71)
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 15) LIMIT 1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mPostalCode Load (0.0ms)[0m   [0mSELECT * FROM "postal_codes" WHERE ("postal_codes"."id" = 30286) [0m
+  [4;36;1mSQL (5.0ms)[0m   [0;1mupdate users set vectors = setweight( to_tsvector(coalesce(name,'') || ' ' || coalesce(email,'') || ' ' || coalesce(zip_code,'')),'A') where users.id = 15[0m
+  [4;35;1mSQL (7.0ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed in 39ms (DB: 14) | 302 Found [http://localhost/logout]

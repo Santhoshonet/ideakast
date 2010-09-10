@@ -1,7 +1,4 @@
-require "ym4r"
-require "ym4r/google_maps"
-require "ym4r/google_maps/api_key"
-require "ym4r/google_maps/geocoding"
+
 # Methods added to this helper will be available to all templates in the application.
 module ApplicationHelper
   
